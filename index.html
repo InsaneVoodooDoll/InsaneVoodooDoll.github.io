@@ -173,7 +173,7 @@
             text-transform: uppercase;
         }
 
-        /* Gestione traduzioni via CSS */
+        /* Di base nascondiamo l'italiano, mostrato poi via JS */
         [lang="it"] { display: none; }
 
         footer {
@@ -198,8 +198,8 @@
         <header id="home">
             <!-- Pulsanti Cambio Lingua -->
             <div class="lang-switch">
-                <button class="lang-btn active" onclick="setLanguage('en')">🇬🇧 EN</button>
-                <button class="lang-btn" onclick="setLanguage('it')">🇮🇹 IT</button>
+                <button id="btn-en" class="lang-btn active" onclick="setLanguage('en')">🇬🇧 EN</button>
+                <button id="btn-it" class="lang-btn" onclick="setLanguage('it')">🇮🇹 IT</button>
             </div>
 
             <h1>Insane Voodoo Doll</h1>
@@ -240,18 +240,16 @@
             <h2 lang="it">Le Radici nel Cemento</h2>
             
             <div lang="en">
-    <p>We aren't young kids. Our roots go back to the humid rehearsal rooms and the chaotic pits of the 80s and 90s underground scene in Florence, Italy.</p>
-    <p>Born from the collision of two historical local bands of that era, we spent years spitting blood and sweat on the stages of squatted spaces like <strong>C.P.A. di Novoli</strong> and <strong>C.S.A. all'Indiano</strong>.</p>
-    <p>Faces and past names don't matter anymore today. Only the rage matters, and it remains exactly the same. We chose a strict anonymity to put back at the center the only thing that holds value: the music and the message. This is not entertainment for nostalgic people, this is a collective outburst recorded in the studio.</p>
-</div>
-
+                <p>We aren't young kids. Our roots go back to the humid rehearsal rooms and the chaotic pits of the 80s and 90s underground scene in Florence, Italy.</p>
+                <p>Born from the collision of two historical local bands of that era, we spent years spitting blood and sweat on the stages of squatted spaces like <strong>C.P.A. di Novoli</strong> and <strong>C.S.A. all'Indiano</strong>.</p>
+                <p>Faces and past names don't matter anymore today. Only the rage matters, and it remains exactly the same. We chose a strict anonymity to put back at the center the only thing that holds value: the music and the message. This is not entertainment for nostalgic people, this is a collective outburst recorded in the studio.</p>
+            </div>
             
             <div lang="it">
-    <p>Non siamo di primo pelo. Veniamo dalle sale prove umide e dalle mazzate nei centri sociali della Firenze anni '80 e '90.</p>
-    <p>Nati dall'unione di due band storiche di quell'epoca, abbiamo passato anni a sputare sangue e sudore sui palchi di spazi occupati come il <strong>C.P.A. di Novoli</strong> e il <strong>C.S.A. all'Indiano</strong>.</p>
-    <p>Le facce e i nomi del passato oggi non contano più. Conta la rabbia, che è rimasta esattamente la stessa. Abbiamo scelto l'anonimato serrato per rimettere al centro della scena l'unica cosa che ha valore: la musica e il messaggio. Questo non è intrattenimento per nostalgici, è uno sfogo collettivo registrato in studio.</p>
-</div>
-
+                <p>Non siamo di primo pelo. Veniamo dalle sale prove umide e dalle mazzate nei centri sociali della Firenze anni '80 e '90.</p>
+                <p>Nati dall'unione di due band storiche di quell'epoca, abbiamo passato anni a sputare sangue e sudore sui palchi di spazi occupati come il <strong>C.P.A. di Novoli</strong> e il <strong>C.S.A. all'Indiano</strong>.</p>
+                <p>Le facce e i nomi del passato oggi non contano più. Conta la rabbia, che è rimasta esattamente la stessa. Abbiamo scelto l'anonimato serrato per rimettere al centro della scena l'unica cosa che ha valore: la musica e il messaggio. Questo non è intrattenimento per nostalgici, è uno sfogo collective registrato in studio.</p>
+            </div>
         </section>
 
         <!-- SEZIONE IL SIMBOLO -->
