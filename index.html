@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>INSANE VOODOO DOLL - Official Site</title>
+   <style>
+       /* Stile Cyber-Punk / Fanzine Hardcore */
+       :root {
+           --bg-color: #121212;
+           --text-color: #e0e0e0;
+           --orange-neon: #ff5500;
+           --blue-neon: #00a8ff;
+           --yellow-neon: #ffcc00;
+           --font-punk: 'Impact', 'Arial Black', sans-serif;
+       }
+
+       body {
+           background-color: var(--bg-color);
+           background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://transparenttextures.com');
+           color: var(--text-color);
+           font-family: 'Courier New', Courier, monospace;
+           line-height: 1.6;
+           margin: 0;
+           padding: 0;
+       }
+
+       .container {
+           max-width: 800px;
+           margin: 0 auto;
+           padding: 20px;
+       }
+
+       /* Header e Logo */
+       header {
+           text-align: center;
+           padding: 50px 0;
+           border-bottom: 4px dashed var(--orange-neon);
+       }
+
+       h1 {
+           font-family: var(--font-punk);
+           font-size: 3.5rem;
+           color: #fff;
+           text-shadow: 3px 3px var(--orange-neon), -3px -3px var(--blue-neon);
+           letter-spacing: 2px;
+           margin: 0 0 10px 0;
+           text-transform: uppercase;
+       }
+
+       .subtitle {
+           font-family: var(--font-punk);
+           color: var(--yellow-neon);
+           font-size: 1.2rem;
+           letter-spacing: 3px;
+           text-transform: uppercase;
+       }
+
+       /* Navigazione Rapida */
+       nav {
+           display: flex;
+           justify-content: center;
+           gap: 15px;
+           margin: 20px 0;
+           flex-wrap: wrap;
+       }
+
+       nav a {
+           color: #fff;
+           text-decoration: none;
+           font-family: var(--font-punk);
+           text-transform: uppercase;
+           padding: 5px 15px;
+           border: 2px solid #fff;
+           background: transparent;
+           transition: all 0.3s ease;
+       }
+
+       nav a:hover {
+           background: var(--blue-neon);
+           color: #000;
+           border-color: var(--blue-neon);
+           transform: scale(1.05);
+       }
+
+       /* Sezioni */
+       section {
+           margin: 60px 0;
+           padding: 30px;
+           background: rgba(255, 255, 255, 0.02);
+           border-left: 5px solid var(--yellow-neon);
+       }
+
+       h2 {
+           font-family: var(--font-punk);
+           font-size: 2rem;
+           color: var(--orange-neon);
+           text-transform: uppercase;
+           margin-top: 0;
+           border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+           padding-bottom: 10px;
+       }
+
+       /* Player Audio */
+       .player-container {
+           background: #000;
+           padding: 20px;
+           border: 2px solid var(--blue-neon);
+           text-align: center;
+           margin-top: 20px;
+       }
+
+       .btn-stream {
+           display: inline-block;
+           background: var(--orange-neon);
+           color: #fff;
+           padding: 15px 30px;
+           font-family: var(--font-punk);
+           font-size: 1.3rem;
+           text-decoration: none;
+           text-transform: uppercase;
+           margin-top: 15px;
+           box-shadow: 4px 4px 0 var(--blue-neon);
+           transition: 0.2s;
+       }
+
+       .btn-stream:hover {
+           transform: translate(-2px, -2px);
+           box-shadow: 6px 6px 0 var(--yellow-neon);
+       }
+
+       /* Lista Simboli */
+       .symbol-list {
+           list-style: none;
+           padding: 0;
+       }
+
+       .symbol-list li {
+           margin-bottom: 20px;
+           padding-left: 20px;
+           border-left: 3px solid var(--blue-neon);
+       }
+
+       .symbol-list strong {
+           color: var(--yellow-neon);
+           font-family: var(--font-punk);
+           text-transform: uppercase;
+       }
+
+       /* Footer */
+       footer {
+           text-align: center;
+           padding: 40px 0;
+           font-size: 0.8rem;
+           color: #666;
+           border-top: 1px dashed rgba(255, 255, 255, 0.1);
+       }
+
+       /* Responsive */
+       @media (max-width: 600px) {
+           h1 { font-size: 2.2rem; }
+           section { padding: 15px; }
+       }
+   </style>
+</head>
+<body>
+
+   <div class="container">
+
+       <header id="home">
+           <h1>Insane Voodoo Doll</h1>
+           <div class="subtitle">4 Maschere. Nessun Volto. Hardcore Puro.</div>
+
+           <nav>
+               <a href="#musica">Musica</a>
+               <a href="#manifesto">Manifesto</a>
+               <a href="#simbolo">Il Simbolo</a>
+               <a href="#cyberpunk">Cyber-Punk AI</a>
+           </nav>
+       </header>
+
+       <!-- SEZIONE MUSICA -->
+       <section id="musica">
+           <h2>We Are All Insanity</h2>
+           <p>Il debutto è fuori ora. Spara il rumore direttamente nei tuoi canali auricolari. Nessun compromesso, nessuna passerella commerciale.</p>
+
+           <div class="player-container">
+               <p style="color: var(--yellow-neon); font-family: var(--font-punk);">ASCOLTA I SINGOLI IN STREAMING</p>
+               <!-- NOTA: Inserire qui sotto il link al vostro profilo iHeart / Bandcamp / Spotify -->
+               <a href="[INSERISCI_LINK_IHEART_O_BANDCAMP_QUI]" target="_blank" class="btn-stream">Ascolta Ora</a>
+           </div>
+       </section>
+
+       <!-- SEZIONE IL MANIFESTO -->
+       <section id="manifesto">
+           <h2>Le Radici nel Cemento</h2>
+           <p>Non siamo di primo pelo. Veniamo dalle sale prove umide e dalle mazzate nei centri sociali della Firenze anni '80 e '90.</p>
+           <p>Abbiamo sputato sangue e sudore sui palchi del <strong>C.P.A. di Novoli</strong> e del <strong>C.S.A. all'Indiano</strong> con i progetti <strong>Infrazione</strong> e <strong>The Cesso</strong>.</p>
+           <p>Le facce oggi non contano più. Conta la rabbia, che è rimasta esattamente la stessa. Abbiamo scelto l'anonimato serrato per rimettere al centro della scena l'unica cosa che ha valore: la musica e il messaggio. Questo non è intrattenimento per nostalgici, è uno sfogo collettivo registrato in studio.</p>
+       </section>
+
+       <!-- SEZIONE IL SIMBOLO -->
+       <section id="simbolo" style="border-left-color: var(--blue-neon);">
+           <h2>Anatomia di una Bambola Voodoo</h2>
+           <p>Il nostro logo non è solo un disegno, è il nostro specchio e la nostra arma. Una bambola voodoo dai tratti morbidi ma dai dettagli taglienti:</p>
+
+           <ul class="symbol-list">
+               <li>
+                   <strong>Il Vendicatore degli Ultimi:</strong> Rappresenta la forza collettiva in grado di stritolare tutto il marcio che infetta il mondo. È lo scudo che difende la causa dei più deboli. Qualcuno al popolo ci pensa ancora, proteggendo il futuro dall'avidità umana.
+               </li>
+               <li>
+                   <strong>FIHC:</strong> Una medaglia incisa sul petto. Rappresenta le nostre radici, la nostra storia e chi siamo. Il Florence Hardcore tatuato nel cuore che non si cancella.
+               </li>
+               <li>
+                   <strong>La "A":</strong> Cucita tra le stelle sulla maglietta, il simbolo dell'anarchia che guida la nostra visione del mondo e i nostri testi.
+               </li>
+               <li>
+                   <strong>Le Catene:</strong> Al collo, sulle braccia e fino alle mani. Stringono il corpo della bambola come i cavi degli strumenti stringono le nostre dita.
+               </li>
+               <li>
+                   <strong>I Lineamenti:</strong> Occhi grandi stile manga e un sorriso chiuso come una cicatrice, incorniciato da guance rosse e borchie coniche a punta colorate di Blu, Arancione e Giallo.
+               </li>
+           </ul>
+       </section>
+
+       <!-- SEZIONE CYBERPUNK -->
+       <section id="cyberpunk" style="border-left-color: var(--orange-neon);">
+           <h2>Cavalcare l'Algoritmo</h2>
+           <p>Il vero punk distrugge le regole, non si fa gabbare dal passatismo. Mentre molte vecchie fazioni della scena aborrono l'Intelligenza Artificiale per paura del futuro, noi abbiamo deciso di cavalcarla.</p>
+           <p>Usiamo la tecnologia per amplificare il nostro messaggio, mantenere il nostro anonimato e far viaggiare la nostra musica oltre le barriere fisiche. Hackera il sistema, usa i suoi stessi strumenti contro di lui.</p>
+
+           <p style="margin-top: 30px; color: var(--orange-neon); font-weight: bold;">SUPPORTA IL RUMORE FISICO:</p>
+           <p>Il feedback in neanche una settimana dal debutto è stato devastante. Stiamo valutando la produzione di un <strong>vinile in tiratura limitatissima</strong>, stampato per pochi e autografato direttamente dalle nostre maschere. Resta sintonizzato.</p>
+       </section>
+
+       <footer>
+           <p>INSANE VOODOO DOLL © 2026 | FIHC - FLORENCE HARDCORE</p>
+           <p style="font-size: 0.7rem; color: #44px;">Nessun tracciamento. Nessun dato salvato. Solo rumore.</p>
+       </footer>
+
+   </div>
+
+</body>
+</html>
