@@ -34,39 +34,6 @@
             text-align: center;
             padding: 50px 0;
             border-bottom: 4px dashed var(--orange-neon);
-            position: relative;
-        }
-
-        /* Selettore Lingua */
-        .lang-switch {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            display: flex;
-            gap: 10px;
-        }
-
-        .lang-btn {
-            background: transparent;
-            border: 2px solid #fff;
-            color: #fff;
-            font-family: var(--font-punk);
-            padding: 5px 10px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: 0.2s;
-        }
-
-        .lang-btn.active {
-            background: var(--orange-neon);
-            border-color: var(--orange-neon);
-            color: #000;
-        }
-
-        .lang-btn:hover {
-            background: var(--blue-neon);
-            color: #000;
-            border-color: var(--blue-neon);
         }
 
         h1 {
@@ -85,6 +52,7 @@
             font-size: 1.2rem;
             letter-spacing: 3px;
             text-transform: uppercase;
+            margin-bottom: 10px;
         }
 
         nav {
@@ -127,6 +95,21 @@
             margin-top: 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             padding-bottom: 10px;
+        }
+
+        .lang-block {
+            margin-bottom: 40px;
+        }
+
+        .lang-title {
+            font-family: var(--font-punk);
+            color: #fff;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+            padding-bottom: 5px;
         }
 
         .player-container {
@@ -173,9 +156,6 @@
             text-transform: uppercase;
         }
 
-        /* Di base nascondiamo l'italiano, mostrato poi via JS */
-        [lang="it"] { display: none; }
-
         footer {
             text-align: center;
             padding: 40px 0;
@@ -187,7 +167,6 @@
         @media (max-width: 600px) {
             h1 { font-size: 2.2rem; }
             section { padding: 15px; }
-            .lang-switch { position: static; justify-content: center; margin-bottom: 15px; }
         }
     </style>
 </head>
@@ -196,70 +175,72 @@
     <div class="container">
 
         <header id="home">
-            <!-- Pulsanti Cambio Lingua -->
-            <div class="lang-switch">
-                <button id="btn-en" class="lang-btn active" onclick="setLanguage('en')">🇬🇧 EN</button>
-                <button id="btn-it" class="lang-btn" onclick="setLanguage('it')">🇮🇹 IT</button>
-            </div>
-
             <h1>Insane Voodoo Doll</h1>
-            
-            <div lang="en" class="subtitle">4 Masks. No Faces. Pure Hardcore.</div>
-            <div lang="it" class="subtitle">4 Maschere. Nessun Volto. Hardcore Puro.</div>
+            <div class="subtitle">4 Masks. No Faces. Pure Hardcore.</div>
+            <div class="subtitle" style="color: var(--blue-neon); font-size: 1rem;">FIHC - Florence Hardcore</div>
             
             <nav>
-                <a href="#musica" lang="en">Music</a>
-                <a href="#musica" lang="it">Musica</a>
-                <a href="#manifesto" lang="en">Manifesto</a>
-                <a href="#manifesto" lang="it">Manifesto</a>
-                <a href="#simbolo" lang="en">The Symbol</a>
-                <a href="#simbolo" lang="it">Il Simbolo</a>
-                <a href="#cyberpunk" lang="en">Cyber-Punk AI</a>
-                <a href="#cyberpunk" lang="it">Cyber-Punk AI</a>
+                <a href="#musica">Music / Musica</a>
+                <a href="#manifesto">Manifesto</a>
+                <a href="#simbolo">The Symbol / Il Simbolo</a>
+                <a href="#cyberpunk">Cyber-Punk AI</a>
             </nav>
         </header>
 
         <!-- SEZIONE MUSICA -->
         <section id="musica">
-            <h2 lang="en">We Are All Insanity</h2>
-            <h2 lang="it">We Are All Insanity</h2>
+            <h2>We Are All Insanity</h2>
             
-            <p lang="en">The debut is out now. Blast the noise straight into your ears. No compromises, no mainstream runways.</p>
-            <p lang="it">Il debutto è fuori ora. Spara il rumore direttamente nei tuoi canali auricolari. Nessun compromesso, nessuna passerella commerciale.</p>
+            <div class="lang-block">
+                <div class="lang-title">🇬🇧 English</div>
+                <p>The debut is out now. Blast the noise straight into your ears. No compromises, no mainstream runways.</p>
+            </div>
+
+            <div class="lang-block" style="margin-bottom: 20px;">
+                <div class="lang-title">🇮🇹 Italiano</div>
+                <p>Il debutto è fuori ora. Spara il rumore direttamente nei tuoi canali auricolari. Nessun compromesso, nessuna passerella commerciale.</p>
+            </div>
             
             <div class="player-container">
-                <p lang="en" style="color: var(--yellow-neon); font-family: var(--font-punk);">STREAM THE SINGLES NOW</p>
-                <p lang="it" style="color: var(--yellow-neon); font-family: var(--font-punk);">ASCOLTA I SINGOLI IN STREAMING</p>
-                <a href="[INSERISCI_LINK_IHEART_O_BANDCAMP_QUI]" target="_blank" class="btn-stream">LISTEN / ASCOLTA</a>
+                <p style="color: var(--yellow-neon); font-family: var(--font-punk); margin: 0 0 10px 0;">LISTEN / ASCOLTA</p>
+                <a href="[INSERISCI_LINK_IHEART_O_BANDCAMP_QUI]" target="_blank" class="btn-stream">STREAM NOW</a>
             </div>
         </section>
 
         <!-- SEZIONE IL MANIFESTO -->
         <section id="manifesto">
-            <h2 lang="en">Roots in the Concrete</h2>
-            <h2 lang="it">Le Radici nel Cemento</h2>
+            <h2>Manifesto</h2>
             
-            <div lang="en">
+            <div class="lang-block">
+                <div class="lang-title">🇬🇧 Roots in the Concrete</div>
                 <p>We aren't young kids. Our roots go back to the humid rehearsal rooms and the chaotic pits of the 80s and 90s underground scene in Florence, Italy.</p>
                 <p>Born from the collision of two historical local bands of that era, we spent years spitting blood and sweat on the stages of squatted spaces like <strong>C.P.A. di Novoli</strong> and <strong>C.S.A. all'Indiano</strong>.</p>
                 <p>Faces and past names don't matter anymore today. Only the rage matters, and it remains exactly the same. We chose a strict anonymity to put back at the center the only thing that holds value: the music and the message. This is not entertainment for nostalgic people, this is a collective outburst recorded in the studio.</p>
             </div>
             
-            <div lang="it">
+            <div class="lang-block" style="margin-bottom: 0;">
+                <div class="lang-title">🇮🇹 Le Radici nel Cemento</div>
                 <p>Non siamo di primo pelo. Veniamo dalle sale prove umide e dalle mazzate nei centri sociali della Firenze anni '80 e '90.</p>
                 <p>Nati dall'unione di due band storiche di quell'epoca, abbiamo passato anni a sputare sangue e sudore sui palchi di spazi occupati come il <strong>C.P.A. di Novoli</strong> e il <strong>C.S.A. all'Indiano</strong>.</p>
-                <p>Le facce e i nomi del passato oggi non contano più. Conta la rabbia, che è rimasta esattamente la stessa. Abbiamo scelto l'anonimato serrato per rimettere al centro della scena l'unica cosa che ha valore: la musica e il messaggio. Questo non è intrattenimento per nostalgici, è uno sfogo collective registrato in studio.</p>
+                <p>Le facce e i nomi del passato oggi non contano più. Conta la rabbia, che è rimasta esattamente la stessa. Abbiamo scelto l'anonimato serrato per rimettere al centro della scena l'unica cosa che ha valore: la musica e il messaggio. Questo non è intrattenimento per nostalgici, è uno sfogo collettivo registrato in studio.</p>
             </div>
         </section>
 
         <!-- SEZIONE IL SIMBOLO -->
         <section id="simbolo" style="border-left-color: var(--blue-neon);">
-            <h2 lang="en">Anatomy of a Voodoo Doll</h2>
-            <h2 lang="it">Anatomia di una Bambola Voodoo</h2>
+            <h2>The Symbol / Il Simbolo</h2>
             
-            <p lang="en">Our logo is not just a drawing, it's our mirror and our weapon. A voodoo doll with soft features but sharp details:</p>
-            <p lang="it">Il nostro logo non è solo un disegno, è il nostro specchio e la nostra arma. Una bambola voodoo dai tratti morbidi ma dai dettagli taglienti:</p>
-            
-            <!-- LISTA IN INGLESE -->
-            <ul class="symbol-list" lang="en">
-                <li>
+            <div class="lang-block">
+                <div class="lang-title">🇬🇧 Anatomy of a Voodoo Doll</div>
+                <p>Our logo is not just a drawing, it's our mirror and our weapon. A voodoo doll with soft features but sharp details:</p>
+                <ul class="symbol-list">
+                    <li><strong>The Avenger of the Oppressed:</strong> It represents the collective force capable of crushing all the rot infesting the world. It's the shield that defends the cause of the weakest. Someone is still thinking about the people, protecting the future from human greed.</li>
+                    <li><strong>FIHC:</strong> A medal engraved on its chest. It stands for our roots, our history, and who we are. Florence Hardcore tattooed in our hearts, which cannot be erased.</li>
+                    <li><strong>The "A":</strong> Stitched among the stars on the shirt, the symbol of anarchy that guides our worldview and our lyrics.</li>
+                    <li><strong>The Chains:</strong> Around the neck, arms, and down to the hands. They tighten the body of the doll just like the cables of our instruments grip our fingers.</li>
+                    <li><strong>The Features:</strong> Large manga-style eyes and a mouth stitched shut like a scar, framed by red cheeks and colored cone-shaped spike hair in Blue, Orange, and Yellow.</li>
+                </ul>
+            </div>
+
+            <div class="lang-block" style="margin-bottom: 0;">
+                <div class="lang-title">🇮🇹 Anatomia di una Bambola Voodoo</div>
