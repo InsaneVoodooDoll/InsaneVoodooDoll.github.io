@@ -22,7 +22,7 @@
 
         body {
             background-color: var(--bg-color);
-            background-image: linear-gradient(rgba(12, 12, 12, 0.93), rgba(12, 12, 12, 0.93)), url('https://transparenttextures.com');
+            background-image: linear-gradient(rgba(12, 12, 12, 0.94), rgba(12, 12, 12, 0.94)), url('https://transparenttextures.com');
             color: var(--text-color);
             font-family: var(--font-text);
             line-height: 1.6;
@@ -30,20 +30,19 @@
             padding: 0;
         }
 
-        /* SFONDO CON LOGO DELLA BAND (Fisso e in trasparenza centrale) */
+        /* SFONDO CON LOGO DELLA BAND (Watermark centrale inserito direttamente) */
         .background-logo {
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 70vw;
-            height: 70vh;
-            /* Incolla il link della tua immagine qui sotto mantenendo le virgolette */
-            background-image: url(<img src="https://i.ibb.co/JjdL9THJ/IMG-0211.jpg">);
+            width: 80vw;
+            height: 80vh;
+            background-image: url('https://i.ibb.co/JjdL9THJ/IMG-0211.jpg');
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
-            opacity: 0.04; /* Trasparenza per non disturbare i testi */
+            opacity: 0.05; /* Trasparenza per non disturbare la lettura */
             z-index: -1;
             pointer-events: none;
         }
@@ -190,6 +189,7 @@
         .symbol-list {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
 
         .symbol-list li {
@@ -260,7 +260,7 @@
             
             <div class="player-container">
                 <p style="font-family: var(--font-titles); color: var(--yellow-neon); font-size: 1.2rem; margin: 0 0 10px 0; letter-spacing: 1px;">LISTEN / ASCOLTA</p>
-                <a href="https://www.iheart.com/artist/insane-voodoo-doll-50637372/" target="_blank" class="btn-stream">STREAM NOW</a>
+                <a href="https://iheart.com" target="_blank" class="btn-stream">STREAM NOW</a>
             </div>
         </section>
 
@@ -271,3 +271,4 @@
             <div class="lang-block">
                 <div class="lang-title">🇬🇧 Roots in the Concrete</div>
                 <p>We are no longer young. After spending the 80s and 90s shouting our truth from the makeshift stages of that era, driven by pure grit and a constructive spirit, today we gathered around a table. The verdict is unbiased and no longer acceptable: the weakest, besides being the ones who suffer the most, are now mocked and derided.</p>
+                <p>We return with our music. In those years we were two separate bands; today we are a single river in full flood, delivering precise verdicts. This is not entertainment for nostalgic people: it is a collective ritual, recorded and shared directly from the studio.</p>
