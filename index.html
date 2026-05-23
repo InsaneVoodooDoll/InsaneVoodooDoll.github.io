@@ -22,8 +22,7 @@
 
         body {
             background-color: var(--bg-color);
-            /* Texture cemento fanzine di sfondo */
-            background-image: linear-gradient(rgba(12, 12, 12, 0.92), rgba(12, 12, 12, 0.92)), url('https://transparenttextures.com');
+            background-image: linear-gradient(rgba(12, 12, 12, 0.93), rgba(12, 12, 12, 0.93)), url('https://transparenttextures.com');
             color: var(--text-color);
             font-family: var(--font-text);
             line-height: 1.6;
@@ -31,7 +30,7 @@
             padding: 0;
         }
 
-        /* SFONDO CON LOGO DELLA BAND (Watermark centrale fisso) */
+        /* SFONDO CON LOGO DELLA BAND (Fisso e in trasparenza centrale) */
         .background-logo {
             position: fixed;
             top: 50%;
@@ -39,12 +38,12 @@
             transform: translate(-50%, -50%);
             width: 70vw;
             height: 70vh;
-            /* NOTA: Sostituisci l'URL qui sotto con il link reale della foto della vostra maschera/logo */
+            /* Incolla il link della tua immagine qui sotto mantenendo le virgolette */
             background-image: url('IL_LINK_DELLA_FOTO_DEL_VOSTRO_LOGO_QUI');
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
-            opacity: 0.04; /* Trasparenza bassissima per non disturbare la lettura dei testi */
+            opacity: 0.04; /* Trasparenza per non disturbare i testi */
             z-index: -1;
             pointer-events: none;
         }
@@ -75,7 +74,7 @@
         .subtitle {
             font-family: var(--font-titles);
             color: var(--yellow-neon);
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-top: 10px;
@@ -121,7 +120,7 @@
         section {
             margin: 70px 0;
             padding: 35px;
-            background: rgba(0, 0, 0, 0.75);
+            background: rgba(0, 0, 0, 0.85);
             border: 3px solid rgba(255, 255, 255, 0.1);
             border-left: 8px solid var(--yellow-neon);
             box-shadow: 6px 6px 0 rgba(0,0,0,0.5);
@@ -228,7 +227,7 @@
 </head>
 <body>
 
-    <!-- Elemento per lo sfondo con il vostro logo -->
+    <!-- Sfondo logo watermark -->
     <div class="background-logo"></div>
 
     <div class="container">
@@ -256,12 +255,12 @@
 
             <div class="lang-block" style="margin-bottom: 20px;">
                 <div class="lang-title">🇮🇹 Italiano</div>
-                <p>Il tempo passa, il marcio peggiora e ci infesta sempre più. Questo assalto sonoro non è un ritorno, né un'operazione nostalgica. È la conseguenza logica di una vita passata a gurdare il mondo bruciare. Dobbiamo vedere le cose esattamente come sono, con una lucidità assoluta e tagliente. Queste tracce, registrate volutamente nell'ombra, portano la lucidità di chi non deve più chiedere il permesso a nessuno. Perché tutti noi possiamo, e dobbiamo, salvare il nostro futuro.</p>
+                <p>Il tempo passa, il marcio peggiora e ci infesta sempre più. Questo assalto sonoro non è un ritorno, né un'operazione nostalgica. È la conseguenza logica di una vita passata a guardare il mondo bruciare. Dobbiamo vedere le cose esattamente come sono, con una lucidità assoluta e tagliente. Queste tracce, registrate volutamente nell'ombra, portano la lucidità di chi non deve più chiedere il permesso a nessuno. Perché tutti noi possiamo, e dobbiamo, salvare il nostro futuro.</p>
             </div>
             
             <div class="player-container">
                 <p style="font-family: var(--font-titles); color: var(--yellow-neon); font-size: 1.2rem; margin: 0 0 10px 0; letter-spacing: 1px;">LISTEN / ASCOLTA</p>
-                <a href="https://iheart.com" target="_blank" class="btn-stream">STREAM NOW</a>
+                <a href="https://www.iheart.com/artist/insane-voodoo-doll-50637372/" target="_blank" class="btn-stream">STREAM NOW</a>
             </div>
         </section>
 
