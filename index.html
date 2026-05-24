@@ -25,7 +25,7 @@
             padding: 0;
         }
 
-        /* SFONDO CON LA MASCHERA - OTTIMIZZATO PER ESSERE IMPONENTE E FISSO */
+        /* SFONDO CON LA MASCHERA IN EVIDENZA */
         .background-logo {
             position: fixed;
             top: 50%;
@@ -89,14 +89,16 @@
             padding-bottom: 5px;
         }
 
+        /* PAROLE LEGGERMENTE PIÙ PICCOLE */
         p {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             margin-bottom: 18px;
             font-weight: bold;
             color: #fff;
             text-shadow: 3px 3px 0px #000, 2px 2px 0px #000, 1px 1px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
         }
 
+        /* LETTORE TRASPARENTE MULTI-LINK */
         .player-container {
             background: transparent;
             padding: 30px;
@@ -105,26 +107,35 @@
             margin-top: 40px;
         }
 
-        .btn-stream {
-            display: inline-block;
-            background: var(--orange-neon);
-            color: #fff;
-            padding: 15px 40px;
+        .stream-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
             font-family: var(--font-punk);
-            font-size: 1.4rem;
+            font-size: 1.3rem;
+            margin-top: 20px;
+            text-shadow: 3px 3px 0px #000;
+        }
+
+        .stream-links a {
+            color: var(--orange-neon);
             text-decoration: none;
             text-transform: uppercase;
-            margin-top: 15px;
-            border: 2px solid #fff;
-            box-shadow: 5px 5px 0 var(--blue-neon);
+            padding: 5px 10px;
+            border: 1px solid transparent;
             transition: 0.2s;
         }
 
-        .btn-stream:hover {
-            transform: translate(-3px, -3px);
-            box-shadow: 8px 8px 0 var(--yellow-neon);
-            background: #fff;
+        .stream-links a:hover {
             color: #000;
+            background: #fff;
+            border: 1px solid #fff;
+        }
+
+        .stream-divider {
+            color: #fff;
+            user-select: none;
         }
 
         footer {
@@ -136,18 +147,17 @@
             border-top: 1px dashed rgba(255, 255, 255, 0.2);
         }
 
-        /* MODIFICHE SPECIFICHE PER SMARTPHONE (AGGRESSIVE ED ENFATICHE) */
         @media (max-width: 600px) {
             h2 { font-size: 2rem; }
             section { padding: 10px; }
-            .btn-stream { font-size: 1.1rem; padding: 12px 25px; }
+            .stream-links { font-size: 1.1rem; gap: 8px; }
+            .stream-divider { display: none; }
             
-            /* FORZATURA LOGO SU SCHERMI STRETTI: OCCUPA TUTTO LO SPAZIO SENZA RIMPICCIOLIRSI */
             .background-logo {
-                width: 140vw; /* Più largo per riempire i lati */
-                height: 110vh; /* Più alto per coprire la lunghezza dello smartphone */
-                background-size: cover; /* Riempie interamente lo sfondo */
-                opacity: 0.35; /* Leggermente più scuro su telefono per far leggere le scritte */
+                width: 140vw;
+                height: 110vh;
+                background-size: cover;
+                opacity: 0.35;
             }
         }
     </style>
@@ -169,7 +179,7 @@
                 <p>
                     Time passes; history should teach us, but this entire vortex of corruption and corrupt individuals infects us more every day.<br>
                     This sonic assault is not a comeback, nor an operation nostalgia.<br>
-                    It is the logical consequence of a lifetime spent watching the world plummet into the abyss.<br>
+                    It is the logical consequence of a lifetime spent watching the world inabissarsi.<br>
                     We must be realistic, with an absolute and at times piercing clarity.<br>
                     These tracks, deliberately recorded in the shadows, lead to an awareness of those who no longer have to ask for permission if this is a means to save our future, because every single one of us has the obligation to save it.
                 </p>
@@ -178,7 +188,7 @@
             <div class="lang-block" style="margin-bottom: 10px;">
                 <div class="lang-title">🇮🇹 Italiano</div>
                 <p>
-                    Il tempo passa, la storia dovrebbe insegnarci, ma tutto questo vortice di corruzione e corrotti ci infesta sempre più.<br>
+                    Il tempo passa, la storia dovrebbe insegnarci, ma tutto questo vortex di corruzione e corrotti ci infesta sempre più.<br>
                     Questo assalto sonoro non è un ritorno, né un'operazione nostalgica.<br>
                     È la conseguenza logica di una vita passata a guardare il mondo inabissarsi.<br>
                     Dobbiamo essere realistici con una lucidità assoluta e a volte tagliente.<br>
@@ -186,10 +196,19 @@
                 </p>
             </div>
             
+            <!-- HUB DI ASCOLTO PULITO E REALE -->
             <div class="player-container">
-                <p style="font-family: var(--font-punk); color: var(--yellow-neon); font-size: 1.2rem; margin: 0 0 10px 0; letter-spacing: 2px; text-shadow: 2px 2px 0px #000;">STREAM ON ALL PLATFORMS / ASCOLTA SU TUTTI I CANALI</p>
-                <!-- LINK DISTROKID INTEGRATO CORRETTAMENTE E BONIFICATO DALL'ERRORE -->
-                <a href="https://distrokid.com" target="_blank" class="btn-stream">DISTROKID HYPERFOLLOW</a>
+                <p style="font-family: var(--font-punk); color: var(--yellow-neon); font-size: 1.2rem; margin: 0 0 5px 0; letter-spacing: 2px; text-shadow: 2px 2px 0px #000;">STREAM THE FIRST SINGLE / ASCOLTA IL PRIMO SINGOLO</p>
+                
+                <div class="stream-links">
+                    <a href="https://iheart.com" target="_blank">IHEART</a>
+                    <span class="stream-divider">|</span>
+                    <a href="https://youtube.com" target="_blank">YOUTUBE</a>
+                    <span class="stream-divider">|</span>
+                    <a href="https://spotify.com" target="_blank">SPOTIFY</a>
+                    <span class="stream-divider">|</span>
+                    <a href="https://apple.com" target="_blank">APPLE</a>
+                </div>
             </div>
         </section>
 
@@ -223,9 +242,4 @@
                 </p>
             </div>
         </section>
-
-        <footer>
-            <p>INSANE VOODOO DOLL © 2026 | FIHC - FLORENCE HARDCORE</p>
-            <p style="font-size: 0.8rem; color: #aaa; letter-spacing: 1px;">No tracking. No data saved. Pure Hardcore Noise.</p>
-        </footer>
 
