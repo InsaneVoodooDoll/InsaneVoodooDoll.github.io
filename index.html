@@ -17,7 +17,7 @@
 
         body {
             background-color: var(--bg-color);
-            background-image: linear-gradient(rgba(12, 12, 12, 0.88), rgba(12, 12, 12, 0.88)), url('https://transparenttextures.com');
+            background-image: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.85)), url('https://transparenttextures.com');
             color: var(--text-color);
             font-family: var(--font-text);
             line-height: 1.6;
@@ -25,7 +25,7 @@
             padding: 0;
         }
 
-        /* SFONDO CON MASCHERA - VISIBILITÀ MOLTO PIÙ ACCENTUATA */
+        /* SFONDO CON LA MASCHERA IN EVIDENZA */
         .background-logo {
             position: fixed;
             top: 50%;
@@ -37,7 +37,7 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
-            opacity: 0.35; /* Visibilità aumentata nettamente per far emergere i tratti della bambola */
+            opacity: 0.40; /* Ottimo bilanciamento visivo */
             z-index: -1;
             pointer-events: none;
         }
@@ -51,57 +51,64 @@
 
         header {
             text-align: center;
-            padding: 40px 0;
-            margin-bottom: 20px;
+            padding: 20px 0;
         }
 
+        /* ELIMINATO IL BOX COPRENTE - TESTO IN RILIEVO FLUTTUANTE */
         section {
-            margin: 40px 0;
-            padding: 35px;
-            background: rgba(0, 0, 0, 0.92);
-            border: 3px solid rgba(255, 255, 255, 0.1);
-            border-left: 8px solid var(--orange-neon);
-            box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.8);
+            margin: 50px 0;
+            padding: 20px;
+            background: transparent; /* Rende la sezione trasparente */
+            border: none; /* Via i bordi scatolati */
+            box-shadow: none;
         }
 
+        /* Ombra nera netta dietro ai titoli per metterli in rilievo */
         h2 {
             font-family: var(--font-punk);
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             color: #fff;
             text-transform: uppercase;
             margin-top: 0;
-            border-bottom: 3px solid var(--orange-neon);
-            padding-bottom: 10px;
-            letter-spacing: 1px;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            text-shadow: 4px 4px 0px #000, -2px -2px 0px #000, 2px -2px 0px #000, -2px 2px 0px #000;
         }
 
         .lang-block {
-            margin-bottom: 35px;
+            margin-bottom: 45px;
         }
 
+        /* Ombra dietro ai titoli delle lingue */
         .lang-title {
             font-family: var(--font-punk);
             color: var(--yellow-neon);
-            font-size: 1rem;
+            font-size: 1.2rem;
             letter-spacing: 2px;
             margin-bottom: 15px;
             text-transform: uppercase;
-            border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+            text-shadow: 3px 3px 0px #000, -1px -1px 0px #000;
+            border-bottom: 2px dashed rgba(255, 255, 255, 0.3);
             padding-bottom: 5px;
         }
 
+        /* Ombra pesante sotto i paragrafi per farli galleggiare sulla foto senza impastarsi */
         p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             margin-bottom: 18px;
             font-weight: bold;
+            color: #fff;
+            text-shadow: 3px 3px 0px #000, 2px 2px 0px #000, 1px 1px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
         }
 
+        /* Player pulito che si appoggia sullo sfondo */
         .player-container {
-            background: #000;
+            background: rgba(0, 0, 0, 0.9);
             padding: 30px;
             border: 3px dashed var(--blue-neon);
             text-align: center;
-            margin-top: 30px;
+            margin-top: 40px;
+            box-shadow: 5px 5px 0px #000;
         }
 
         .btn-stream {
@@ -130,24 +137,24 @@
             text-align: center;
             padding: 60px 0;
             font-size: 0.9rem;
-            color: #666;
-            border-top: 1px dashed rgba(255, 255, 255, 0.1);
+            color: #fff;
+            text-shadow: 2px 2px 0px #000;
+            border-top: 1px dashed rgba(255, 255, 255, 0.2);
         }
 
         @media (max-width: 600px) {
-            h2 { font-size: 1.8rem; }
-            section { padding: 20px; }
+            h2 { font-size: 2rem; }
+            section { padding: 10px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- La maschera della band domina lo sfondo del tavolo -->
+    <!-- La maschera della band fa da tavolo visibile dietro ai testi -->
     <div class="background-logo"></div>
 
     <div class="container">
 
-        <!-- L'intestazione con i testi testuali è stata rimossa, lasciando solo uno spazio pulito prima del contenuto -->
         <header id="home"></header>
 
         <!-- SEZIONE MUSICA -->
@@ -165,14 +172,14 @@
             </div>
             
             <div class="player-container">
-                <p style="font-family: var(--font-punk); color: var(--yellow-neon); font-size: 1.1rem; margin: 0 0 10px 0; letter-spacing: 2px;">LISTEN / ASCOLTA</p>
+                <p style="font-family: var(--font-punk); color: var(--yellow-neon); font-size: 1.1rem; margin: 0 0 10px 0; letter-spacing: 2px; text-shadow: 2px 2px 0px #000;">LISTEN / ASCOLTA</p>
                 <a href="https://iheart.com" target="_blank" class="btn-stream">STREAM NOW</a>
             </div>
         </section>
 
         <footer>
             <p>INSANE VOODOO DOLL © 2026 | FIHC - FLORENCE HARDCORE</p>
-            <p style="font-size: 0.8rem; color: #444; letter-spacing: 1px;">No tracking. No data saved. Pure Hardcore Noise.</p>
+            <p style="font-size: 0.8rem; color: #aaa; letter-spacing: 1px;">No tracking. No data saved. Pure Hardcore Noise.</p>
         </footer>
 
     </div>
