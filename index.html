@@ -30,7 +30,7 @@
             padding: 0;
         }
 
-        /* SFONDO CON LOGO DELLA BAND (Collegamento interno diretto al file caricato) */
+        /* SFONDO CON LOGO DELLA BAND (Watermark centrale fisso con URL assoluto e sicuro) */
         .background-logo {
             position: fixed;
             top: 50%;
@@ -38,11 +38,11 @@
             transform: translate(-50%, -50%);
             width: 85vw;
             height: 85vh;
-            background-image: url('IMG_0230.jpeg');
+            background-image: url('https://ibb.co');
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
-            opacity: 0.06; /* Trasparenza calibrata per non disturbare la lettura dei testi */
+            opacity: 0.06;
             z-index: -1;
             pointer-events: none;
         }
@@ -164,17 +164,11 @@
             color: #555;
             border-top: 2px dashed rgba(255, 255, 255, 0.1);
         }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 2.5rem; }
-            .subtitle { font-size: 1.1rem; }
-            section { padding: 20px; }
-        }
     </style>
 </head>
 <body>
 
-    <!-- Sfondo logo watermark collegato direttamente al file sul server -->
+    <!-- Sfondo logo watermark integrato con il link internet sicuro -->
     <div class="background-logo"></div>
 
     <div class="container">
