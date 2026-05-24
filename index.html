@@ -3,26 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INSANE VOODOO DOLL - Official Site</title>
-    <!-- Importazione Font Aggressivi da Google Fonts -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Permanent+Marker&family=Special+Elite&display=swap" rel="stylesheet">
-    
+    <title>INSANE VOODOO DOLL</title>
     <style>
         :root {
             --bg-color: #0c0c0c;
-            --text-color: #d8d8d8;
+            --text-color: #e0e0e0;
             --orange-neon: #ff4500;
             --blue-neon: #00a8ff;
             --yellow-neon: #ffcc00;
-            --font-titles: 'Permanent Marker', 'Impact', sans-serif;
-            --font-text: 'Special Elite', 'Courier New', monospace;
+            --font-punk: 'Arial Black', 'Impact', sans-serif;
+            --font-text: 'Courier New', Courier, monospace;
         }
 
         body {
             background-color: var(--bg-color);
-            background-image: linear-gradient(rgba(12, 12, 12, 0.94), rgba(12, 12, 12, 0.94)), url('https://transparenttextures.com');
+            background-image: linear-gradient(rgba(12, 12, 12, 0.88), rgba(12, 12, 12, 0.88)), url('https://transparenttextures.com');
             color: var(--text-color);
             font-family: var(--font-text);
             line-height: 1.6;
@@ -30,101 +25,75 @@
             padding: 0;
         }
 
-        /* SFONDO CON LOGO DELLA BAND (Collegamento interno perfetto a IMG_0230.jpeg) */
+        /* SFONDO CON MASCHERA - VISIBILITÀ MOLTO PIÙ ACCENTUATA */
         .background-logo {
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 85vw;
-            height: 85vh;
+            width: 90vw;
+            height: 90vh;
             background-image: url('IMG_0230.jpeg');
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
-            opacity: 0.06; /* Trasparenza calibrata per non disturbare la lettura dei testi */
+            opacity: 0.35; /* Visibilità aumentata nettamente per far emergere i tratti della bambola */
             z-index: -1;
             pointer-events: none;
         }
 
         .container {
-            max-width: 850px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 20px;
             position: relative;
         }
 
         header {
             text-align: center;
-            padding: 60px 0 40px 0;
-            border-bottom: 5px dashed var(--orange-neon);
-        }
-
-        h1 {
-            font-family: var(--font-titles);
-            font-size: 4rem;
-            color: #fff;
-            text-shadow: 4px 4px var(--orange-neon), -3px -3px var(--blue-neon);
-            letter-spacing: 1px;
-            margin: 0 0 5px 0;
-            text-transform: uppercase;
-        }
-
-        .subtitle {
-            font-family: var(--font-titles);
-            color: var(--yellow-neon);
-            font-size: 1.6rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-top: 10px;
-        }
-
-        .fihc-tag {
-            font-family: var(--font-titles);
-            color: var(--blue-neon);
-            font-size: 1.1rem;
-            letter-spacing: 4px;
-            margin-top: 5px;
+            padding: 40px 0;
+            margin-bottom: 20px;
         }
 
         section {
-            margin: 70px 0;
+            margin: 40px 0;
             padding: 35px;
-            background: rgba(0, 0, 0, 0.88);
+            background: rgba(0, 0, 0, 0.92);
             border: 3px solid rgba(255, 255, 255, 0.1);
-            border-left: 8px solid var(--yellow-neon);
-            box-shadow: 6px 6px 0 rgba(0,0,0,0.5);
+            border-left: 8px solid var(--orange-neon);
+            box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.8);
         }
 
         h2 {
-            font-family: var(--font-titles);
+            font-family: var(--font-punk);
             font-size: 2.5rem;
-            color: var(--orange-neon);
+            color: #fff;
             text-transform: uppercase;
             margin-top: 0;
-            border-bottom: 2px solid var(--orange-neon);
+            border-bottom: 3px solid var(--orange-neon);
             padding-bottom: 10px;
             letter-spacing: 1px;
         }
 
         .lang-block {
-            margin-bottom: 45px;
+            margin-bottom: 35px;
         }
 
         .lang-title {
-            font-family: var(--font-titles);
-            color: #fff;
-            font-size: 1.1rem;
+            font-family: var(--font-punk);
+            color: var(--yellow-neon);
+            font-size: 1rem;
             letter-spacing: 2px;
             margin-bottom: 15px;
             text-transform: uppercase;
-            border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
             padding-bottom: 5px;
         }
 
         p {
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             margin-bottom: 18px;
+            font-weight: bold;
         }
 
         .player-container {
@@ -140,8 +109,8 @@
             background: var(--orange-neon);
             color: #fff;
             padding: 15px 40px;
-            font-family: var(--font-titles);
-            font-size: 1.5rem;
+            font-family: var(--font-punk);
+            font-size: 1.4rem;
             text-decoration: none;
             text-transform: uppercase;
             margin-top: 15px;
@@ -159,25 +128,27 @@
 
         footer {
             text-align: center;
-            padding: 50px 0;
-            font-size: 0.85rem;
-            color: #555;
-            border-top: 2px dashed rgba(255, 255, 255, 0.1);
+            padding: 60px 0;
+            font-size: 0.9rem;
+            color: #666;
+            border-top: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 600px) {
+            h2 { font-size: 1.8rem; }
+            section { padding: 20px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Lo sfondo con la vostra maschera, caricato dal server interno -->
+    <!-- La maschera della band domina lo sfondo del tavolo -->
     <div class="background-logo"></div>
 
     <div class="container">
 
-        <header id="home">
-            <h1>Insane Voodoo Doll</h1>
-            <div class="subtitle">4 masks pure hardcore</div>
-            <div class="fihc-tag">FIHC - Florence Hardcore</div>
-        </header>
+        <!-- L'intestazione con i testi testuali è stata rimossa, lasciando solo uno spazio pulito prima del contenuto -->
+        <header id="home"></header>
 
         <!-- SEZIONE MUSICA -->
         <section id="musica">
@@ -188,20 +159,20 @@
                 <p>Time passes; the rot worsens and infects us more every day. This sonic assault is not a comeback, nor an operation nostalgia. It is the logical consequence of a lifetime spent watching the world burn. We must see things exactly as they are, with absolute and piercing clarity. These tracks, deliberately recorded in the shadows, carry the lucidity of those who no longer have to ask for permission. Because together, we can and we must save our future.</p>
             </div>
 
-            <div class="lang-block" style="margin-bottom: 20px;">
+            <div class="lang-block" style="margin-bottom: 10px;">
                 <div class="lang-title">🇮🇹 Italiano</div>
                 <p>Il tempo passa, il marcio peggiora e ci infesta sempre più. Questo assalto sonoro non è un ritorno, né un'operazione nostalgica. È la conseguenza logica di una vita passata a guardare il mondo bruciare. Dobbiamo vedere le cose esattamente come sono, con una lucidità assoluta e tagliente. Queste tracce, registrate volutamente nell'ombra, portano la lucidità di chi non deve più chiedere il permesso a nessuno. Perché tutti noi possiamo, e dobbiamo, salvare il nostro futuro.</p>
             </div>
             
             <div class="player-container">
-                <p style="font-family: var(--font-titles); color: var(--yellow-neon); font-size: 1.2rem; margin: 0 0 10px 0; letter-spacing: 1px;">LISTEN / ASCOLTA</p>
+                <p style="font-family: var(--font-punk); color: var(--yellow-neon); font-size: 1.1rem; margin: 0 0 10px 0; letter-spacing: 2px;">LISTEN / ASCOLTA</p>
                 <a href="https://iheart.com" target="_blank" class="btn-stream">STREAM NOW</a>
             </div>
         </section>
 
         <footer>
             <p>INSANE VOODOO DOLL © 2026 | FIHC - FLORENCE HARDCORE</p>
-            <p style="font-size: 0.75rem; color: #555;">No tracking. No data saved. Pure Hardcore Noise.</p>
+            <p style="font-size: 0.8rem; color: #444; letter-spacing: 1px;">No tracking. No data saved. Pure Hardcore Noise.</p>
         </footer>
 
     </div>
