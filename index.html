@@ -25,14 +25,14 @@
             padding: 0;
         }
 
-        /* SFONDO CON LA MASCHERA IN EVIDENZA */
+        /* SFONDO CON LA MASCHERA - OTTIMIZZATO PER ESSERE IMPONENTE E FISSO */
         .background-logo {
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 90vw;
-            height: 90vh;
+            width: 95vw;
+            height: 95vh;
             background-image: url('IMG_0230.jpeg');
             background-repeat: no-repeat;
             background-position: center;
@@ -136,10 +136,19 @@
             border-top: 1px dashed rgba(255, 255, 255, 0.2);
         }
 
+        /* MODIFICHE SPECIFICHE PER SMARTPHONE (AGGRESSIVE ED ENFATICHE) */
         @media (max-width: 600px) {
             h2 { font-size: 2rem; }
             section { padding: 10px; }
             .btn-stream { font-size: 1.1rem; padding: 12px 25px; }
+            
+            /* FORZATURA LOGO SU SCHERMI STRETTI: OCCUPA TUTTO LO SPAZIO SENZA RIMPICCIOLIRSI */
+            .background-logo {
+                width: 140vw; /* Più largo per riempire i lati */
+                height: 110vh; /* Più alto per coprire la lunghezza dello smartphone */
+                background-size: cover; /* Riempie interamente lo sfondo */
+                opacity: 0.35; /* Leggermente più scuro su telefono per far leggere le scritte */
+            }
         }
     </style>
 </head>
@@ -179,12 +188,12 @@
             
             <div class="player-container">
                 <p style="font-family: var(--font-punk); color: var(--yellow-neon); font-size: 1.2rem; margin: 0 0 10px 0; letter-spacing: 2px; text-shadow: 2px 2px 0px #000;">STREAM ON ALL PLATFORMS / ASCOLTA SU TUTTI I CANALI</p>
-                <!-- Agganciato il link reale e pulito di DistroKid -->
+                <!-- LINK DISTROKID INTEGRATO CORRETTAMENTE E BONIFICATO DALL'ERRORE -->
                 <a href="https://distrokid.com" target="_blank" class="btn-stream">DISTROKID HYPERFOLLOW</a>
             </div>
         </section>
 
-        <!-- SEZIONE IL MANIFESTO (FASE 2) -->
+        <!-- SEZIONE IL MANIFESTO -->
         <section id="manifesto">
             <h2>Manifesto</h2>
             
@@ -208,7 +217,7 @@
                     Il verdetto risulta imparziale e non è più accettabile: i più deboli, oltre a essere la cerchia che più ci rimette, vengono anche sbeffeggiati e derisi.<br>
                     Torniamo con la nostra musica.<br>
                     In quegli anni eravamo due distinti gruppi, adesso siamo un unico fiume in piena con verdetti ben precisi.<br>
-                    Questo non è intrattenimento per nostalgici: è un rito collective, registrato e condiviso direttamente nello studio.<br>
+                    Questo non è intrattenimento per nostalgici: è un rito collettivo, registrato e condiviso direttamente nello studio.<br>
                     La nostra storia rimane come cicatrici addosso alla nostra pelle.<br>
                     Adesso i nomi del passato non contano più: conta la necessità di mettere in evidenza questo problema globale.
                 </p>
@@ -220,7 +229,3 @@
             <p style="font-size: 0.8rem; color: #aaa; letter-spacing: 1px;">No tracking. No data saved. Pure Hardcore Noise.</p>
         </footer>
 
-    </div>
-
-</body>
-</html>
