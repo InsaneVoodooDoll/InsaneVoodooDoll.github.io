@@ -22,7 +22,11 @@
             line-height: 1.8;
             margin: 0;
             padding: 0;
+            position: relative;
+            overflow-x: hidden;
         }
+        
+        /* LOGO DI SFONDO PRINCIPALE */
         .background-logo {
             position: fixed;
             top: 50%;
@@ -35,15 +39,38 @@
             background-position: center;
             background-size: contain;
             opacity: 0.40;
-            z-index: -1;
+            z-index: -2;
             pointer-events: none;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            position: relative;
+
+        /* STRUTTURA COLLAGE FOTOGRAFICO DI SOTTOFONDO */
+        .collage-photo {
+            position: absolute;
+            z-index: -1;
+            pointer-events: none;
+            background-color: #111;
+            padding: 10px 10px 25px 10px;
+            border: 1px solid #222;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.5), 10px 15px 25px rgba(0,0,0,0.7); 
+            filter: grayscale(100%) contrast(140%) brightness(0.7);
+            opacity: 0.25;
+            max-width: 320px;
+            width: 35vw;
+            height: auto;
         }
+        .collage-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #000;
+        }
+
+        /* Posizionamento asimmetrico e inclinazioni delle foto */
+        .photo-1 { top: 15%; left: -5%; transform: rotate(-6deg); }
+        .photo-2 { top: 45%; right: -5%; transform: rotate(8deg); }
+        .photo-3 { top: 70%; left: -3%; transform: rotate(-4deg); }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; position: relative; }
         header { text-align: center; padding: 20px 0; }
         section { margin: 60px 0; padding: 20px; background: transparent; border: none; box-shadow: none; }
         h2 {
@@ -60,23 +87,39 @@
             text-shadow: 3px 3px 0px #000, 2px 2px 0px #000, 1px 1px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
         }
         .player-container { background: transparent; padding: 30px; border: 3px dashed var(--blue-neon); text-align: center; margin-top: 40px; }
+        
+        /* STILE DEI LINK AGGIORNATO */
         .stream-links, .contact-links {
             display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; font-family: var(--font-punk); font-size: 1.3rem; margin-top: 20px; text-shadow: 3px 3px 0px #000;
         }
-        .stream-links a, .contact-links a { color: var(--orange-neon); text-decoration: none; text-transform: uppercase; padding: 5px 10px; border: 1px solid transparent; transition: 0.2s; display: inline-block; }
-        .stream-links a:hover, .contact-links a:hover { color: #000; background: #fff; border: 1px solid #fff; }
-        .stream-divider { color: #fff; user-select: none; }
+        .stream-links a, .contact-links a { 
+            color: var(--orange-neon); text-decoration: none; text-transform: uppercase; padding: 8px 15px; border: 2px solid transparent; transition: 0.2s; display: inline-block; 
+        }
+        .stream-links a:hover, .contact-links a:hover { 
+            color: #000; background: #fff; border: 2px solid #fff; transform: scale(1.05) rotate(-1deg); box-shadow: -4px 4px 0px var(--orange-neon);
+        }
+        .stream-divider { color: #fff; user-select: none; align-self: center; }
         footer { text-align: center; padding: 60px 0; font-size: 0.9rem; color: #fff; text-shadow: 2px 2px 0px #000; border-top: 1px dashed rgba(255, 255, 255, 0.2); }
+        
         @media (max-width: 600px) {
             h2 { font-size: 2rem; } section { padding: 10px; } .stream-links, .contact-links { font-size: 1.1rem; gap: 8px; } .stream-divider { display: none; }
             .background-logo { width: 140vw; height: 110vh; background-size: cover; opacity: 0.35; }
+            .collage-photo { max-width: 150px; opacity: 0.15; }
+            .photo-1 { top: 20%; left: -10%; }
+            .photo-2 { top: 50%; right: -10%; }
+            .photo-3 { top: 75%; left: -8%; }
         }
     </style>
 </head>
 <body>
     <div class="background-logo"></div>
+    <div class="collage-photo photo-1"><img src="IMG_0211.jpeg" alt="Insane Voodoo Doll Sfondo 1"></div>
+    <div class="collage-photo photo-2"><img src="IMG_0223.jpeg" alt="Insane Voodoo Doll Sfondo 2"></div>
+    <div class="collage-photo photo-3"><img src="IMG_0224.jpeg" alt="Insane Voodoo Doll Sfondo 3"></div>
+
     <div class="container">
         <header id="home"></header>
+        
         <section id="musica">
             <h2>We Are All Insanity</h2>
             <div class="lang-block">
@@ -94,6 +137,7 @@
                 </div>
             </div>
         </section>     
+        
         <section id="manifesto">
             <h2>Manifesto</h2>
             <div class="lang-block">
@@ -105,6 +149,7 @@
                 <p>Dopo aver passato gli anni '80 e '90 a urlare le nostre verità dai palchi improvvisati ma interiormente vissuti di un era oramai dimenticata, spinti da pura grinta e spirito costruttivo, oggi ci siamo riuniti intorno a un tavolo, ci siamo raccontati il passato e il presente, guardandoci il risultato è stato tutt’altro che roseo per il nostro futuro.<br>Il verdetto è senza preconcetti e non è più contrattabile: non è accettabile che i più deboli, oltre ad essere quelli che che soffrono di più, vengono ora derisi e scherniti.<br>Torniamo con la nostra musica. In quegli anni eravamo due band separate, oggi siamo un unico fiume in piena, che emette verdetti precisi.<br>Questo non sarà un intrattenimento per nostalgici: sarà un rituale collettivo, registrato e condiviso direttamente dallo studio.<br>La nostra historia rimane impressa come cicatrici sulla nostra pelle.<br>I nomi del passato non contano più: ciò che conta ora è la necessità di denunciare e risolvere questa crisi globale.<br>Soltanto l’Unione di tutti, anche con un minimo contributo sensato porterà a dei risultati concreti!</p>
             </div>
         </section>
+        
         <section id="contatti">
             <h2>Contacts</h2>
             <div class="player-container" style="border: 3px dashed var(--orange-neon);">
@@ -112,12 +157,13 @@
                 <div class="contact-links">
                     <a href="mailto:insanevoodoodoll@proton.me">EMAIL</a>
                     <span class="stream-divider">|</span>
-                    <a href="https://www.instagram.com/insane.voodoo.doll" target="_blank">INSTAGRAM</a>
+                    <a href="https://www.instagram.com/insane.voodoo.doll?igsh=cGxiMmc3bDNndWdz&utm_source=qr" target="_blank">INSTAGRAM</a>
                     <span class="stream-divider">|</span>
                     <a href="https://www.facebook.com/share/1CcxYGsE47/" target="_blank">FACEBOOK</a>
                 </div>
             </div>
         </section>
+        
         <footer>
             <p>INSANE VOODOO DOLL © 2026 | FIHC - FLORENCE HARDCORE</p>
             <p style="font-size: 0.8rem; color: #aaa; letter-spacing: 1px;">No tracking. No data saved. Pure Hardcore Noise.</p>
@@ -127,3 +173,4 @@
 </html>
 
 
+            
