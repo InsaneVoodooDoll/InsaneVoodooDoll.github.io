@@ -30,7 +30,7 @@
             padding: 0;
         }
 
-        /* SFONDO CON LOGO DELLA BAND (Watermark centrale fisso con URL assoluto e sicuro) */
+        /* SFONDO CON LOGO DELLA BAND (Collegamento interno perfetto a IMG_0230.jpeg) */
         .background-logo {
             position: fixed;
             top: 50%;
@@ -38,11 +38,11 @@
             transform: translate(-50%, -50%);
             width: 85vw;
             height: 85vh;
-            background-image: url('https://ibb.co');
+            background-image: url('IMG_0230.jpeg');
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
-            opacity: 0.06;
+            opacity: 0.06; /* Trasparenza calibrata per non disturbare la lettura dei testi */
             z-index: -1;
             pointer-events: none;
         }
@@ -168,7 +168,7 @@
 </head>
 <body>
 
-    <!-- Sfondo logo watermark integrato con il link internet sicuro -->
+    <!-- Lo sfondo con la vostra maschera, caricato dal server interno -->
     <div class="background-logo"></div>
 
     <div class="container">
