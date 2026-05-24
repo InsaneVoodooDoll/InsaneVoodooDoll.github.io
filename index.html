@@ -3,128 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INSANE VOODOO DOLL</title>
+    <title>Insane Voodoo Doll - Official Site</title>
+    
     <style>
-        :root {
-            --bg-color: #0c0c0c;
-            --text-color: #d8d8d8;
-            --orange-neon: #ff4500;
-            --blue-neon: #00a8ff;
-            --yellow-neon: #ffcc00;
-            --font-punk: 'Arial Black', 'Impact', sans-serif;
-            --font-text: 'Courier New', Courier, monospace;
-        }
-        body {
-            background-color: var(--bg-color);
-            background-image: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.85)), url('https://transparenttextures.com');
-            color: var(--text-color);
-            font-family: var(--font-text);
-            line-height: 1.8;
+        /* RESET GENERALE STILI */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        .background-logo {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 95vw;
-            height: 95vh;
-            background-image: url('IMG_0230.jpeg');
-            background-repeat: no-repeat;
+
+        /* SFONDO GENERALE CON LA QUARTA FOTO IMPOSTATA */
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.85)), url('IMG_0230.jpeg');
+            background-size: cover;
             background-position: center;
-            background-size: contain;
-            opacity: 0.40;
-            z-index: -1;
-            pointer-events: none;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Lo sfondo resta fermo mentre si scorre la pagina */
+            color: #ffffff; /* Testo bianco */
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.6;
+            padding: 20px;
         }
-        .container {
-            max-width: 800px;
+
+        /* CONTENITORE CENTRALE */
+        .main-container {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
-            position: relative;
+            text-align: center;
         }
-        header { text-align: center; padding: 20px 0; }
-        section { margin: 60px 0; padding: 20px; background: transparent; border: none; box-shadow: none; }
-        h2 {
-            font-family: var(--font-punk); font-size: 2.8rem; color: #fff; text-transform: uppercase; margin-top: 0; margin-bottom: 30px; letter-spacing: 2px;
-            text-shadow: 4px 4px 0px #000, -2px -2px 0px #000, 2px -2px 0px #000, -2px 2px 0px #000;
+
+        /* TITOLO DELLA BAND */
+        .band-name {
+            font-size: 3.5rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-shadow: 3px 3px 0px #000;
         }
-        .lang-block { margin-bottom: 45px; }
-        .lang-title {
-            font-family: var(--font-punk); color: var(--yellow-neon); font-size: 1.2rem; letter-spacing: 2px; margin-bottom: 15px; text-transform: uppercase;
-            text-shadow: 3px 3px 0px #000, -1px -1px 0px #000; border-bottom: 2px dashed rgba(255, 255, 255, 0.3); padding-bottom: 5px;
+
+        /* SEZIONE DELLA BIOGRAFIA / TESTI */
+        .bio-section {
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            padding: 15px;
+            font-size: 1.1rem;
+            color: #eeeeee;
+            background-color: rgba(0, 0, 0, 0.6); /* Scatola scura per leggere meglio il testo sullo sfondo */
+            border-left: 3px solid #ff0000;
         }
-        p {
-            font-size: 1.05rem; margin-bottom: 18px; font-weight: bold; color: #fff;
-            text-shadow: 3px 3px 0px #000, 2px 2px 0px #000, 1px 1px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
+
+        /* ==========================================
+           STILE DEI 4 LINK (PUNK/GRUNGE)
+           ========================================== */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin: 0 auto 60px auto;
+            max-width: 400px;
+            padding: 0 20px;
         }
-        .player-container { background: transparent; padding: 30px; border: 3px dashed var(--blue-neon); text-align: center; margin-top: 40px; }
-        .stream-links, .contact-links {
-            display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; font-family: var(--font-punk); font-size: 1.3rem; margin-top: 20px; text-shadow: 3px 3px 0px #000;
+
+        .punk-link {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            color: #ffffff;
+            background-color: rgba(21, 21, 21, 0.9);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+            border: 3px solid #ffffff;
+            box-shadow: 6px 6px 0px #000;
+            transition: all 0.2s ease;
         }
-        .stream-links a, .contact-links a { color: var(--orange-neon); text-decoration: none; text-transform: uppercase; padding: 5px 10px; border: 1px solid transparent; transition: 0.2s; display: inline-block; }
-        .stream-links a:hover, .contact-links a:hover { color: #000; background: #fff; border: 1px solid #fff; }
-        .stream-divider { color: #fff; user-select: none; }
-        footer { text-align: center; padding: 60px 0; font-size: 0.9rem; color: #fff; text-shadow: 2px 2px 0px #000; border-top: 1px dashed rgba(255, 255, 255, 0.2); }
-        @media (max-width: 600px) {
-            h2 { font-size: 2rem; } section { padding: 10px; } .stream-links, .contact-links { font-size: 1.1rem; gap: 8px; } .stream-divider { display: none; }
-            .background-logo { width: 140vw; height: 110vh; background-size: cover; opacity: 0.35; }
+
+        /* Effetto distorsione e cambio colore al passaggio del mouse */
+        .punk-link:hover {
+            background-color: #ff0000; /* Rosso fuoco */
+            color: #000000; /* Testo nero per contrasto tagliente */
+            border-color: #ff0000;
+            transform: scale(1.04) rotate(-1.5deg); /* Si storce visibilmente */
+            box-shadow: -6px 6px 0px #ffffff;
+            cursor: pointer;
+        }
+
+        /* ==========================================
+           STILE DELLA GALLERIA (FANZINE)
+           ========================================== */
+        .gallery-title {
+            color: #ff0000;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 0px #000;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 35px;
+            padding: 0 20px 60px 20px;
+            width: 100%;
+        }
+
+        /* Contenitore foto stile pezzo di carta ritagliato male */
+        .gallery-item {
+            background-color: #1a1a1a;
+            padding: 12px;
+            border: 2px solid #222;
+            box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.9);
+            transition: transform 0.3s ease, filter 0.3s ease, border-color 0.3s ease;
+            filter: grayscale(100%) contrast(135%); /* Bianco e nero duro ad alto contrasto */
+        }
+
+        /* Rotazioni asimmetriche alternate per le tre foto */
+        .gallery-item:nth-child(1) { transform: rotate(-3deg); }
+        .gallery-item:nth-child(2) { transform: rotate(2.5deg); }
+        .gallery-item:nth-child(3) { transform: rotate(-1.5deg); }
+
+        /* Effetto al passaggio del mouse sulle foto */
+        .gallery-item:hover {
+            filter: grayscale(0%) contrast(100%); /* Torna ai colori reali */
+            transform: scale(1.05) rotate(0deg); /* Si raddrizza e si ingrandisce */
+            border-color: #ff0000; /* Il bordo diventa rosso */
+            z-index: 5;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <div class="background-logo"></div>
-    <div class="container">
-        <header id="home"></header>
-        <section id="musica">
-            <h2>We Are All Insanity</h2>
-            <div class="lang-block">
-                <div class="lang-title">🇬🇧 English</div>
-                <p>Time passes, unfortunately and fortunately; history should teach us, but this entire spiral of corruptors and corrupt individuals infects us more every day.<br>This sonic assault is not a comeback, nor an operation nostalgia. It is the logical consequence of a lifetime spent watching the world sickeningly plummet into the abyss.<br>We must be realistic, with an absolute and at times piercing clarity.<br>These tracks, deliberately recorded in the shadows, lead to the awareness of those who no longer have to ask anyone for permission, if this is a means to save our future. Because every single one of us has the obligation to save it.</p>
+
+    <div class="main-container">
+        <!-- TITOLO PRINCIPALE -->
+        <h1 class="band-name">Insane Voodoo Doll</h1>
+
+        <!-- SEZIONE TESTI UFFICIALI -->
+        <div class="bio-section">
+            <p>Benvenuti nel sito ufficiale degli Insane Voodoo Doll. Restate sintonizzati per ricevere tutti gli aggiornamenti sulle prossime uscite discografiche, i concerti dal vivo e il merchandise ufficiale.</p>
+        </div>
+
+        <!-- SEZIONE DEI 4 LINK UFFICIALI INSERITI -->
+        <div class="links-container">
+            <a href="https://distrokid.com/hyperfollow/insanevoodoodoll/we-are-all-insanity-intro--break-all-barriers-2" class="punk-link" target="_blank">DistroKid</a>
+            <a href="mailto:insanevoodoodoll@proton.me" class="punk-link">Proton Mail</a>
+            <a href="https://www.instagram.com/insane.voodoo.doll?igsh=cGxiMmc3bDNndWdz&utm_source=qr" class="punk-link" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/share/1CcxYGsE47/?mibextid=wwXIfr" class="punk-link" target="_blank">Facebook</a>
+        </div>
+
+        <!-- SEZIONE GALLERIA FOTOGRAFICA -->
+        <h2 class="gallery-title">Live & Noise</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="IMG_0211.jpeg" alt="Insane Voodoo Doll Live 1">
             </div>
-            <div class="lang-block" style="margin-bottom: 10px;">
-                <div class="lang-title">🇮🇹 Italiano</div>
-                <p>Il tempo passa purtroppo e per fortuna, la storia dovrebbe insegnarci, ma tutta questa spirale di corruttori e corrotti ci infestano sempre più.<br>Questo assalto sonoro non è un ritorno, né un'operazione nostalgica, è la conseguenza logica di una vita passata a guardare disgustosamente il mondo inabissarsi.<br>Dobbiamo essere realistici con una lucidità assoluta e a volte tagliente.<br>Queste tracce, registrate volutamente nell'ombra, portano ad una consapevolezza di chi non deve chiedere più il permesso a nessuno se questo è un mezzo per salvare il nostro futuro, perché tutti noi abbiamo l'obbligo di salvarlo.</p>
+            <div class="gallery-item">
+                <img src="IMG_0223.jpeg" alt="Insane Voodoo Doll Live 2">
             </div>
-            <div class="player-container">
-                <p style="font-family: var(--font-punk); color: var(--yellow-neon); font-size: 1.2rem; margin: 0 0 5px 0; letter-spacing: 2px; text-shadow: 2px 2px 0px #000;">STREAM THE FIRST SINGLE / ASCOLTA IL PRIMO SINGOLO</p>
-                <div class="stream-links">
-                    <a href="https://distrokid.com/hyperfollow/insanevoodoodoll/we-are-all-insanity-intro--break-all-barriers-2" target="_blank">DISTROKID / LISTEN NOW</a>
-                </div>
+            <div class="gallery-item">
+                <img src="IMG_0224.jpeg" alt="Insane Voodoo Doll Live 3">
             </div>
-        </section>     
-        <section id="manifesto">
-            <h2>Manifesto</h2>
-            <div class="lang-block">
-                <div class="lang-title">🇬🇧 Roots in the Concrete</div>
-                <p>After spending the '80s and '90s screaming our truths from makeshift yet deeply lived stages of a now forgotten era, driven by pure grit and a constructive spirit, today we have gathered around a table. We talked about the past and the present, and looking at each other, the result was anything but bright for our future.<br>The verdict is unbiased and no longer negotiable: it is completely unacceptable that the weakest, besides being the ones who suffer the most, are now mocked and derided.<br>We return with our music. In those years we were two separate bands; today we are a single raging river, delivering precise verdicts.<br>This will not be entertainment for the nostalgic: it will be a collective ritual, recorded and shared directly from the studio.<br>Our history remains engraved like scars upon our skin.<br>The names of the past no longer matter: what matters now is the necessity to denounce and resolve this global crisis.<br>Only the Union of everyone, even with a minimal, meaningful contribution, will lead to concrete results!</p>
-            </div>
-            <div class="lang-block">
-                <div class="lang-title">🇮🇹 Le Radici nel Cemento</div>
-                <p>Dopo aver passato gli anni '80 e '90 a urlare le nostre verità dai palchi improvvisati ma interiormente vissuti di un era oramai dimenticata, spinti da pura grinta e spirito costruttivo, oggi ci siamo riuniti intorno a un tavolo, ci siamo raccontati il passato e il presente, guardandoci il risultato è stato tutt’altro che roseo per il nostro futuro.<br>Il verdetto è senza preconcetti e non è più contrattabile: non è accettabile che i più deboli, oltre ad essere quelli che che soffrono di più, vengono ora derisi e scherniti.<br>Torniamo con la nostra musica. In quegli anni eravamo due band separate, oggi siamo un unico fiume in piena, che emette verdetti precisi.<br>Questo non sarà un intrattenimento per nostalgici: sarà un rituale collettivo, registrato e condiviso direttamente dallo studio.<br>La nostra historia rimane impressa come cicatrici sulla nostra pelle.<br>I nomi del passato non contano più: ciò che conta ora è la necessità di denunciare e risolvere questa crisi globale.<br>Soltanto l’Unione di tutti, anche con un minimo contributo sensato porterà a dei risultati concreti!</p>
-            </div>
-        </section>
-        <section id="contatti">
-            <h2>Contacts</h2>
-            <div class="player-container" style="border: 3px dashed var(--orange-neon);">
-                <p style="font-family: var(--font-punk); color: var(--yellow-neon); font-size: 1.2rem; margin: 0 0 5px 0; letter-spacing: 2px; text-shadow: 2px 2px 0px #000;">BOOKING & NOISE NETWORKS</p>
-                <div class="contact-links">
-                    <a href="mailto:insanevoodoodoll@proton.me">EMAIL</a>
-                    <span class="stream-divider">|</span>
-                    <a href="https://www.instagram.com/insane.voodoo.doll" target="_blank">INSTAGRAM</a>
-                    <span class="stream-divider">|</span>
-                    <a href="https://www.facebook.com/share/1CcxYGsE47/" target="_blank">FACEBOOK</a>
-                </div>
-            </div>
-        </section>
-        <footer>
-            <p>INSANE VOODOO DOLL © 2026 | FIHC - FLORENCE HARDCORE</p>
-            <p style="font-size: 0.8rem; color: #aaa; letter-spacing: 1px;">No tracking. No data saved. Pure Hardcore Noise.</p>
-        </footer>
+        </div>
     </div>
+
 </body>
 </html>
-
-
-        
