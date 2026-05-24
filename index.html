@@ -107,7 +107,7 @@
             margin-top: 40px;
         }
 
-        .stream-links {
+        .stream-links, .contact-links {
             display: flex;
             justify-content: center;
             gap: 15px;
@@ -118,7 +118,7 @@
             text-shadow: 3px 3px 0px #000;
         }
 
-        .stream-links a {
+        .stream-links a, .contact-links a {
             color: var(--orange-neon);
             text-decoration: none;
             text-transform: uppercase;
@@ -127,10 +127,15 @@
             transition: 0.2s;
         }
 
-        .stream-links a:hover {
+        .stream-links a:hover, .contact-links a:hover {
             color: #000;
             background: #fff;
             border: 1px solid #fff;
+        }
+
+        .stream-divider {
+            color: #fff;
+            user-select: none;
         }
 
         footer {
@@ -145,7 +150,8 @@
         @media (max-width: 600px) {
             h2 { font-size: 2rem; }
             section { padding: 10px; }
-            .stream-links { font-size: 1.1rem; gap: 8px; }
+            .stream-links, .contact-links { font-size: 1.1rem; gap: 8px; }
+            .stream-divider { display: none; }
             
             .background-logo {
                 width: 140vw;
@@ -181,7 +187,7 @@
             <div class="lang-block" style="margin-bottom: 10px;">
                 <div class="lang-title">🇮🇹 Italiano</div>
                 <p>
-                    Il tempo purtroppo e per fortuna passa, la storia dovrebbe insegnarci, ma tutta questa spirale di corruttori e corrotti ci infestano sempre più.<br>
+                    Il tempo passa purtroppo e per fortuna, la storia dovrebbe insegnarci, ma tutta questa spirale di corruttori e corrotti ci infestano sempre più.<br>
                     Questo assalto sonoro non è un ritorno, né un'operazione nostalgica, è la conseguenza logica di una vita passata a guardare disgustosamente il mondo inabissarsi.<br>
                     Dobbiamo essere realistici con una lucidità assoluta e a volte tagliente.<br>
                     Queste tracce, registrate volutamente nell'ombra, portano ad una consapevolezza di chi non deve chiedere più il permesso a nessuno se questo è un mezzo per salvare il nostro futuro, perché tutti noi abbiamo l'obbligo di salvarlo.
@@ -222,5 +228,3 @@
                     Il verdetto è senza preconcetti e non è più contrattabile: non è accettabile che i più deboli, oltre ad essere quelli che che soffrono di più, vengono ora derisi e scherniti.<br>
                     Torniamo con la nostra musica. In quegli anni eravamo due band separate, oggi siamo un unico fiume in piena, che emette verdetti precisi.<br>
                     Questo non sarà un intrattenimento per nostalgici: sarà un rituale collettivo, registrato e condiviso direttamente dallo studio.<br>
-                    La nostra storia rimane impressa come cicatrici sulla nostra pelle.<br>
-                    I nomi del passato non contano più: ciò che conta ora è la necessità di denunciare e risolvere questa crisi globale.<br>
