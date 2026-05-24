@@ -20,7 +20,7 @@
             background-image: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.85)), url('https://transparenttextures.com');
             color: var(--text-color);
             font-family: var(--font-text);
-            line-height: 1.6;
+            line-height: 1.8;
             margin: 0;
             padding: 0;
         }
@@ -37,7 +37,7 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
-            opacity: 0.40; /* Ottimo bilanciamento visivo */
+            opacity: 0.40;
             z-index: -1;
             pointer-events: none;
         }
@@ -54,16 +54,14 @@
             padding: 20px 0;
         }
 
-        /* ELIMINATO IL BOX COPRENTE - TESTO IN RILIEVO FLUTTUANTE */
         section {
             margin: 50px 0;
             padding: 20px;
-            background: transparent; /* Rende la sezione trasparente */
-            border: none; /* Via i bordi scatolati */
+            background: transparent;
+            border: none;
             box-shadow: none;
         }
 
-        /* Ombra nera netta dietro ai titoli per metterli in rilievo */
         h2 {
             font-family: var(--font-punk);
             font-size: 2.8rem;
@@ -79,7 +77,6 @@
             margin-bottom: 45px;
         }
 
-        /* Ombra dietro ai titoli delle lingue */
         .lang-title {
             font-family: var(--font-punk);
             color: var(--yellow-neon);
@@ -92,7 +89,6 @@
             padding-bottom: 5px;
         }
 
-        /* Ombra pesante sotto i paragrafi per farli galleggiare sulla foto senza impastarsi */
         p {
             font-size: 1.15rem;
             margin-bottom: 18px;
@@ -101,14 +97,13 @@
             text-shadow: 3px 3px 0px #000, 2px 2px 0px #000, 1px 1px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
         }
 
-        /* Player pulito che si appoggia sullo sfondo */
+        /* CONTAINER ASCOLTA COMPLETAMENTE TRASPARENTE */
         .player-container {
-            background: rgba(0, 0, 0, 0.9);
+            background: transparent; /* Rimossa ogni copertura nera */
             padding: 30px;
             border: 3px dashed var(--blue-neon);
             text-align: center;
             margin-top: 40px;
-            box-shadow: 5px 5px 0px #000;
         }
 
         .btn-stream {
@@ -163,12 +158,24 @@
             
             <div class="lang-block">
                 <div class="lang-title">🇬🇧 English</div>
-                <p>Time passes; the rot worsens and infects us more every day. This sonic assault is not a comeback, nor an operation nostalgia. It is the logical consequence of a lifetime spent watching the world burn. We must see things exactly as they are, with absolute and piercing clarity. These tracks, deliberately recorded in the shadows, carry the lucidity of those who no longer have to ask for permission. Because together, we can and we must save our future.</p>
+                <p>
+                    Time passes; history should teach us, but this entire vortex of corruption and corrupt individuals infects us more every day.<br>
+                    This sonic assault is not a comeback, nor an operation nostalgia.<br>
+                    It is the logical consequence of a lifetime spent watching the world plummet into the abyss.<br>
+                    We must be realistic, with an absolute and at times piercing clarity.<br>
+                    These tracks, deliberately recorded in the shadows, lead to an awareness of those who no longer have to ask for permission if this is a means to save our future, because every single one of us has the obligation to save it.
+                </p>
             </div>
 
             <div class="lang-block" style="margin-bottom: 10px;">
                 <div class="lang-title">🇮🇹 Italiano</div>
-                <p>Il tempo passa, il marcio peggiora e ci infesta sempre più. Questo assalto sonoro non è un ritorno, né un'operazione nostalgica. È la conseguenza logica di una vita passata a guardare il mondo bruciare. Dobbiamo vedere le cose esattamente come sono, con una lucidità assoluta e tagliente. Queste tracce, registrate volutamente nell'ombra, portano la lucidità di chi non deve più chiedere il permesso a nessuno. Perché tutti noi possiamo, e dobbiamo, salvare il nostro futuro.</p>
+                <p>
+                    Il tempo passa, la storia dovrebbe insegnarci, ma tutto questo vortice di corruzione e corrotti ci infesta sempre più.<br>
+                    Questo assalto sonoro non è un ritorno, né un'operazione nostalgica.<br>
+                    È la conseguenza logica di una vita passata a guardare il mondo ad inabissarsi.<br>
+                    Dobbiamo essere realistici con una lucidità assoluta e a volte tagliente.<br>
+                    Queste tracce, registrate volutamente nell'ombra, portano ad una consapevolezza di chi non deve chiedere più il permesso a nessuno se questo è un mezzo per salvare il nostro futuro, perché tutti noi abbiamo l'obbligo di salvarlo.
+                </p>
             </div>
             
             <div class="player-container">
