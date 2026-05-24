@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <style>
         :root {
             --bg-color: #0c0c0c;
-            --text-color: #d8d8d8;
+            --text-color: #e0e0e0;
             --orange-neon: #ff4500;
             --blue-neon: #00a8ff;
             --yellow-neon: #ffcc00;
@@ -17,27 +17,27 @@
 
         body {
             background-color: var(--bg-color);
-            background-image: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.85)), url('https://transparenttextures.com');
+            background-image: linear-gradient(rgba(12, 12, 12, 0.88), rgba(12, 12, 12, 0.88)), url('https://transparenttextures.com');
             color: var(--text-color);
             font-family: var(--font-text);
-            line-height: 1.8;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
         }
 
-        /* SFONDO CON LA MASCHERA IN EVIDENZA */
+        /* SFONDO CON MASCHERA - VISIBILITÀ MOLTO PIÙ ACCENTUATA */
         .background-logo {
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 95vw;
-            height: 95vh;
+            width: 90vw;
+            height: 90vh;
             background-image: url('IMG_0230.jpeg');
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
-            opacity: 0.40;
+            opacity: 0.35; /* Visibilità aumentata nettamente per far emergere i tratti della bambola */
             z-index: -1;
             pointer-events: none;
         }
@@ -51,123 +51,103 @@
 
         header {
             text-align: center;
-            padding: 20px 0;
+            padding: 40px 0;
+            margin-bottom: 20px;
         }
 
         section {
-            margin: 60px 0;
-            padding: 20px;
-            background: transparent;
-            border: none;
-            box-shadow: none;
+            margin: 40px 0;
+            padding: 35px;
+            background: rgba(0, 0, 0, 0.92);
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-left: 8px solid var(--orange-neon);
+            box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.8);
         }
 
         h2 {
             font-family: var(--font-punk);
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             color: #fff;
             text-transform: uppercase;
             margin-top: 0;
-            margin-bottom: 30px;
-            letter-spacing: 2px;
-            text-shadow: 4px 4px 0px #000, -2px -2px 0px #000, 2px -2px 0px #000, -2px 2px 0px #000;
+            border-bottom: 3px solid var(--orange-neon);
+            padding-bottom: 10px;
+            letter-spacing: 1px;
         }
 
         .lang-block {
-            margin-bottom: 45px;
+            margin-bottom: 35px;
         }
 
         .lang-title {
             font-family: var(--font-punk);
             color: var(--yellow-neon);
-            font-size: 1.2rem;
+            font-size: 1rem;
             letter-spacing: 2px;
             margin-bottom: 15px;
             text-transform: uppercase;
-            text-shadow: 3px 3px 0px #000, -1px -1px 0px #000;
-            border-bottom: 2px dashed rgba(255, 255, 255, 0.3);
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
             padding-bottom: 5px;
         }
 
-        /* PAROLE LEGGERMENTE PIÙ PICCOLE */
         p {
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             margin-bottom: 18px;
             font-weight: bold;
-            color: #fff;
-            text-shadow: 3px 3px 0px #000, 2px 2px 0px #000, 1px 1px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
         }
 
-        /* LETTORE TRASPARENTE MULTI-LINK */
         .player-container {
-            background: transparent;
+            background: #000;
             padding: 30px;
             border: 3px dashed var(--blue-neon);
             text-align: center;
-            margin-top: 40px;
+            margin-top: 30px;
         }
 
-        .stream-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
+        .btn-stream {
+            display: inline-block;
+            background: var(--orange-neon);
+            color: #fff;
+            padding: 15px 40px;
             font-family: var(--font-punk);
-            font-size: 1.3rem;
-            margin-top: 20px;
-            text-shadow: 3px 3px 0px #000;
-        }
-
-        .stream-links a {
-            color: var(--orange-neon);
+            font-size: 1.4rem;
             text-decoration: none;
             text-transform: uppercase;
-            padding: 5px 10px;
-            border: 1px solid transparent;
+            margin-top: 15px;
+            border: 2px solid #fff;
+            box-shadow: 5px 5px 0 var(--blue-neon);
             transition: 0.2s;
         }
 
-        .stream-links a:hover {
-            color: #000;
+        .btn-stream:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 8px 8px 0 var(--yellow-neon);
             background: #fff;
-            border: 1px solid #fff;
-        }
-
-        .stream-divider {
-            color: #fff;
-            user-select: none;
+            color: #000;
         }
 
         footer {
             text-align: center;
             padding: 60px 0;
             font-size: 0.9rem;
-            color: #fff;
-            text-shadow: 2px 2px 0px #000;
-            border-top: 1px dashed rgba(255, 255, 255, 0.2);
+            color: #666;
+            border-top: 1px dashed rgba(255, 255, 255, 0.1);
         }
 
         @media (max-width: 600px) {
-            h2 { font-size: 2rem; }
-            section { padding: 10px; }
-            .stream-links { font-size: 1.1rem; gap: 8px; }
-            .stream-divider { display: none; }
-            
-            .background-logo {
-                width: 140vw;
-                height: 110vh;
-                background-size: cover;
-                opacity: 0.35;
-            }
+            h2 { font-size: 1.8rem; }
+            section { padding: 20px; }
         }
     </style>
 </head>
 <body>
 
+    <!-- La maschera della band domina lo sfondo del tavolo -->
     <div class="background-logo"></div>
 
     <div class="container">
 
+        <!-- L'intestazione con i testi testuali è stata rimossa, lasciando solo uno spazio pulito prima del contenuto -->
         <header id="home"></header>
 
         <!-- SEZIONE MUSICA -->
@@ -176,48 +156,26 @@
             
             <div class="lang-block">
                 <div class="lang-title">🇬🇧 English</div>
-                <p>
-                    Time passes; history should teach us, but this entire vortex of corruption and corrupt individuals infects us more every day.<br>
-                    This sonic assault is not a comeback, nor an operation nostalgia.<br>
-                    It is the logical consequence of a lifetime spent watching the world inabissarsi.<br>
-                    We must be realistic, with an absolute and at times piercing clarity.<br>
-                    These tracks, deliberately recorded in the shadows, lead to an awareness of those who no longer have to ask for permission if this is a means to save our future, because every single one of us has the obligation to save it.
-                </p>
+                <p>Time passes; the rot worsens and infects us more every day. This sonic assault is not a comeback, nor an operation nostalgia. It is the logical consequence of a lifetime spent watching the world burn. We must see things exactly as they are, with absolute and piercing clarity. These tracks, deliberately recorded in the shadows, carry the lucidity of those who no longer have to ask for permission. Because together, we can and we must save our future.</p>
             </div>
 
             <div class="lang-block" style="margin-bottom: 10px;">
                 <div class="lang-title">🇮🇹 Italiano</div>
-                <p>
-                    Il tempo passa, la storia dovrebbe insegnarci, ma tutto questo vortex di corruzione e corrotti ci infesta sempre più.<br>
-                    Questo assalto sonoro non è un ritorno, né un'operazione nostalgica.<br>
-                    È la conseguenza logica di una vita passata a guardare il mondo inabissarsi.<br>
-                    Dobbiamo essere realistici con una lucidità assoluta e a volte tagliente.<br>
-                    Queste tracce, registrate volutamente nell'ombra, portano ad una consapevolezza di chi non deve chiedere più il permesso a nessuno se questo è un mezzo per salvare il nostro futuro, perché tutti noi abbiamo l'obbligo di salvarlo.
-                </p>
+                <p>Il tempo passa, il marcio peggiora e ci infesta sempre più. Questo assalto sonoro non è un ritorno, né un'operazione nostalgica. È la conseguenza logica di una vita passata a guardare il mondo bruciare. Dobbiamo vedere le cose esattamente come sono, con una lucidità assoluta e tagliente. Queste tracce, registrate volutamente nell'ombra, portano la lucidità di chi non deve più chiedere il permesso a nessuno. Perché tutti noi possiamo, e dobbiamo, salvare il nostro futuro.</p>
             </div>
             
-            <!-- HUB DI ASCOLTO PULITO E REALE -->
             <div class="player-container">
-                <p style="font-family: var(--font-punk); color: var(--yellow-neon); font-size: 1.2rem; margin: 0 0 5px 0; letter-spacing: 2px; text-shadow: 2px 2px 0px #000;">STREAM THE FIRST SINGLE / ASCOLTA IL PRIMO SINGOLO</p>
-                
-                <div class="stream-links">
-                    <a href="https://iheart.com" target="_blank">IHEART</a>
-                    <span class="stream-divider">|</span>
-                    <a href="https://youtube.com" target="_blank">YOUTUBE</a>
-                    <span class="stream-divider">|</span>
-                    <a href="https://spotify.com" target="_blank">SPOTIFY</a>
-                    <span class="stream-divider">|</span>
-                    <a href="https://apple.com" target="_blank">APPLE</a>
-                </div>
+                <p style="font-family: var(--font-punk); color: var(--yellow-neon); font-size: 1.1rem; margin: 0 0 10px 0; letter-spacing: 2px;">LISTEN / ASCOLTA</p>
+                <a href="https://distrokid.com" target="_blank" class="btn-stream">STREAM NOW</a>
             </div>
         </section>
 
-        <!-- SEZIONE IL MANIFESTO -->
-        <section id="manifesto">
-            <h2>Manifesto</h2>
-            
-            <div class="lang-block">
-                <div class="lang-title">🇬🇧 Roots in the Concrete</div>
-                <p>
-                    After spending the 80s and 90s shouting our truth from the makeshift stages of that era, driven by pure grit and a constructive spirit, today we gathered around a table.<br>
-                    The verdict is unbiased and no longer acceptable: the weakest, besides being the ones who suffer the most, are now mocked and derided.<br>
+        <footer>
+            <p>INSANE VOODOO DOLL © 2026 | FIHC - FLORENCE HARDCORE</p>
+            <p style="font-size: 0.8rem; color: #444; letter-spacing: 1px;">No tracking. No data saved. Pure Hardcore Noise.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
