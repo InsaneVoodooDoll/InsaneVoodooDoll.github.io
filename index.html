@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INSANE VOODOO DOLL</title>
     <style>
+        /* CARICAMENTO DEL FONT PUNK KID DAL REPOSITORY */
+        @font-face {
+            font-family: 'PunkKid';
+            src: url('PUNK_KID.TTF') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         :root {
             --bg-color: #0c0c0c;
             --text-color: #d8d8d8;
             --orange-neon: #ff4500;
             --blue-neon: #00a8ff;
             --yellow-neon: #ffcc00;
-            --font-punk: 'Arial Black', 'Impact', sans-serif;
+            --font-punk: 'PunkKid', 'Arial Black', 'Impact', sans-serif;
             --font-text: 'Courier New', Courier, monospace;
         }
         body {
@@ -65,35 +73,20 @@
         }
 
         /* EFFETTO BORDI E ANGOLI SCIUPATI, ROTTI E STRAPPATI */
-        .photo-1 { 
-            top: 10%; 
-            left: -5%; 
-            transform: rotate(-3deg); 
-            clip-path: polygon(2% 0%, 98% 3%, 100% 95%, 95% 100%, 0% 98%, 3% 50%);
-        }
-        .photo-2 { 
-            top: 40%; 
-            right: -5%; 
-            transform: rotate(4deg); 
-            clip-path: polygon(0% 4%, 95% 0%, 98% 92%, 91% 100%, 4% 96%, 1% 40%);
-        }
-        .photo-3 { 
-            top: 65%; 
-            left: -3%; 
-            transform: rotate(-2deg); 
-            clip-path: polygon(4% 1%, 100% 5%, 96% 98%, 88% 95%, 1% 100%, 0% 30%);
-        }
+        .photo-1 { top: 10%; left: -5%; transform: rotate(-3deg); clip-path: polygon(2% 0%, 98% 3%, 100% 95%, 95% 100%, 0% 98%, 3% 50%); }
+        .photo-2 { top: 40%; right: -5%; transform: rotate(4deg); clip-path: polygon(0% 4%, 95% 0%, 98% 92%, 91% 100%, 4% 96%, 1% 40%); }
+        .photo-3 { top: 65%; left: -3%; transform: rotate(-2deg); clip-path: polygon(4% 1%, 100% 5%, 96% 98%, 88% 95%, 1% 100%, 0% 30%); }
 
         .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; position: relative; }
         header { text-align: center; padding: 20px 0; }
         section { margin: 60px 0; padding: 20px; background: transparent; border: none; box-shadow: none; }
         h2 {
-            font-family: var(--font-punk); font-size: 2.8rem; color: #fff; text-transform: uppercase; margin-top: 0; margin-bottom: 30px; letter-spacing: 2px;
+            font-family: var(--font-punk); font-size: 3.2rem; color: #fff; text-transform: uppercase; margin-top: 0; margin-bottom: 30px; letter-spacing: 3px;
             text-shadow: 4px 4px 0px #000, -2px -2px 0px #000, 2px -2px 0px #000, -2px 2px 0px #000;
         }
         .lang-block { margin-bottom: 45px; }
         .lang-title {
-            font-family: var(--font-punk); color: var(--yellow-neon); font-size: 1.2rem; letter-spacing: 2px; margin-bottom: 15px; text-transform: uppercase;
+            font-family: var(--font-punk); color: var(--yellow-neon); font-size: 1.5rem; letter-spacing: 2px; margin-bottom: 15px; text-transform: uppercase;
             text-shadow: 3px 3px 0px #000, -1px -1px 0px #000; border-bottom: 2px dashed rgba(255, 255, 255, 0.3); padding-bottom: 5px;
         }
         p {
@@ -109,7 +102,7 @@
         }
         
         .stream-links, .contact-links {
-            display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; font-family: var(--font-punk); font-size: 1.3rem; margin-top: 20px; text-shadow: 3px 3px 0px #000;
+            display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; font-family: var(--font-punk); font-size: 1.5rem; margin-top: 20px; text-shadow: 3px 3px 0px #000;
         }
         .stream-links a, .contact-links a { 
             color: var(--orange-neon); text-decoration: none; text-transform: uppercase; padding: 8px 15px; border: 2px solid transparent; transition: 0.2s; display: inline-block; 
@@ -121,7 +114,7 @@
         footer { text-align: center; padding: 60px 0; font-size: 0.9rem; color: #fff; text-shadow: 2px 2px 0px #000; border-top: 1px dashed rgba(255, 255, 255, 0.2); }
         
         @media (max-width: 600px) {
-            h2 { font-size: 2rem; } section { padding: 10px; } .stream-links, .contact-links { font-size: 1.1rem; gap: 8px; } .stream-divider { display: none; }
+            h2 { font-size: 2.2rem; } section { padding: 10px; } .stream-links, .contact-links { font-size: 1.2rem; gap: 8px; } .stream-divider { display: none; }
             .background-logo { width: 140vw; height: 110vh; background-size: cover; opacity: 0.35; }
             .collage-photo { max-width: 450px; opacity: 0.55; }
             .photo-1 { top: 15%; left: -10%; }
@@ -162,10 +155,10 @@
             <div class="lang-block">
                 <div class="lang-title">🇬🇧 Roots in the Concrete</div>
                 <p>After spending the '80s and '90s screaming our truths from makeshift yet deeply lived stages of a now forgotten era, driven by pure grit and a constructive spirit, today we have gathered around a table. We talked about the past and the present, and looking at each other, the result was anything but bright for our future.<br>The verdict is unbiased and no longer negotiable: it is completely unacceptable that the weakest, besides being the ones who suffer the most, are now mocked and derided.<br>We return with our music. In those years we were two separate bands; today we are a single raging river, delivering precise verdicts.<br>This will not be entertainment for the nostalgic: it will be a collective ritual, recorded and shared directly from the studio.<br>Our history remains engraved like scars upon our skin.<br>The names of the past no longer matter: what matters now is the necessity to denounce and resolve this global crisis.<br>Only the Union of everyone, even with a minimal, meaningful contribution, will lead to concrete results!</p>
-            </div>    
-            <div class="lang-block">
+            </div>
+                        <div class="lang-block">
                 <div class="lang-title">🇮🇹 RADICI NEL CEMENTO</div>
-                <p>Dopo aver passato gli anni '80 e '90 a urlare le nostre verità dai palchi improvvisati ma interiormente vissuti di un era oramai dimenticata, spinti da pura grinta e spirito costruttivo, oggi ci siamo riuniti intorno a un tavolo, ci siamo raccontati il passato e il presente, guardandoci il risultato è stato tutt’altro che roseo for il nostro futuro.<br>Il verdetto è senza preconcetti e non è più contrattabile: non è accettabile che i più deboli, oltre ad essere quelli che che soffrono di più, vengono ora derisi e scherniti.<br>Torniamo con la nostra musica. In quegli anni eravamo due band separate, oggi siamo un unico fiume in piena, che emette verdetti precisi.<br>Questo non sarà un intrattenimento per nostalgici: sarà un rituale collettivo, registrato e condiviso direttamente dallo studio.<br>La nostra historia rimane impressa come cicatrici sulla nostra pelle.<br>I nomi del passato non contano più: ciò che conta ora è la necessità di denunciare e risolvere questa crisi globale.<br>Soltanto l’Unione di tutti, anche con un minimo contributo sensato porterà a dei risultati concreti!</p>
+                <p>Dopo aver passato gli anni '80 e '90 a urlare le nostre verità dai palchi improvvisati ma interiormente vissuti di un era oramai dimenticata, spinti da pura grinta e spirito costruttivo, oggi ci siamo riuniti intorno a un tavolo, ci siamo raccontati il passato e il presente, guardandoci il risultato è stato tutt’altro che roseo per il nostro futuro.<br>Il verdetto è senza preconcetti e non è più contrattabile: non è accettabile che i più deboli, oltre ad essere quelli che che soffrono di più, vengono ora derisi e scherniti.<br>Torniamo con la nostra musica. In quegli anni eravamo due band separate, oggi siamo un unico fiume in piena, che emette verdetti precisi.<br>Questo non sarà un intrattenimento per nostalgici: sarà un rituale collettivo, registrato e condiviso direttamente dallo studio.<br>La nostra historia rimane impressa come cicatrici sulla nostra pelle.<br>I nomi del passato non contano più: ciò che conta ora è la necessità di denunciare e risolvere questa crisi globale.<br>Soltanto l’Unione di tutti, anche con un minimo contributo sensato porterà a dei risultati concreti!</p>
             </div>
         </section>
         
@@ -178,7 +171,7 @@
                     <span class="stream-divider">|</span>
                     <a href="https://www.instagram.com/insane.voodoo.doll?igsh=cGxiMmc3bDNndWdz&utm_source=qr" target="_blank">INSTAGRAM</a>
                     <span class="stream-divider">|</span>
-                    <a href="https://www.facebook.com/share/1CcxYGsE47/?mibextid=wwXIfr" target="_blank">FACEBOOK</a>
+                    <a href="https://www.facebook.com/share/1CcxYGsE47/" target="_blank">FACEBOOK</a>
                 </div>
             </div>
         </section>
@@ -191,5 +184,3 @@
 </body>
 </html>
 
-
-            
