@@ -22,7 +22,6 @@
         }
         body {
             background-color: var(--bg-color);
-            /* AGGANCIATA LA GRAFICA DEL SINGOLO COME SFONDO NUDO */
             background-image: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.90)), url('grafica-singolo-insanity.jpeg');
             background-size: cover;
             background-position: center;
@@ -50,49 +49,19 @@
             font-family: var(--font-punk); font-size: 1.3rem; color: var(--yellow-neon); margin: 25px 0 15px 0; text-transform: uppercase; text-shadow: 2px 2px 0px #000;
         }
         
-        /* SCATOLA DEL TESTO TRASPARENTE SENZA RETTANGOLO NERO */
-        .lyrics-box {
-            background-color: transparent; 
-            padding: 10px 0; 
-            border: none;
-            box-shadow: none; 
-            margin-bottom: 40px;
-        }
-        .lyrics-text {
-            font-size: 1.1rem; color: #fff; font-weight: bold; text-shadow: 3px 3px 0px #000, -1px -1px 0px #000; white-space: pre-line; margin-bottom: 30px;
-        }
+        .lyrics-box { background-color: transparent; padding: 10px 0; border: none; box-shadow: none; margin-bottom: 40px; }
+        .lyrics-text { font-size: 1.1rem; color: #fff; font-weight: bold; text-shadow: 3px 3px 0px #000, -1px -1px 0px #000; white-space: pre-line; margin-bottom: 30px; }
         
-        /* I BLOCCHI DEI PENSIERI GALLEGGIANO NUDI SULLO SFONDO */
-        .band-thought {
-            background: transparent; 
-            padding: 0; 
-            border: none; 
-            margin-top: 40px; 
-            font-size: 1.05rem; 
-            color: #fff;
-            text-align: left;
-        }
+        .band-thought { background: transparent; padding: 0; border: none; margin-top: 40px; font-size: 1.05rem; color: #fff; text-align: left; }
         .thought-block { margin-bottom: 40px; }
-        .thought-block p {
-            text-shadow: 2px 2px 0px #000, -1px -1px 0px #000;
-            font-weight: bold;
-        }
+        .thought-block p { text-shadow: 2px 2px 0px #000, -1px -1px 0px #000; font-weight: bold; }
         
-        .player-container { 
-            background: transparent; padding: 25px 0; 
-            border-top: 1px dashed rgba(255,255,255,0.3);
-            border-bottom: 1px dashed rgba(255,255,255,0.3);
-            text-align: center; margin-top: 50px; 
-        }
-        .stream-links {
-            display: flex; justify-content: center; gap: 15px; font-family: var(--font-punk); font-size: 1.3rem; margin-top: 15px; text-shadow: 3px 3px 0px #000;
-        }
-        .stream-links a { color: var(--orange-neon); text-decoration: none; text-transform: uppercase; padding: 8px 15px; border: 2px solid transparent; transition: 0.2s; }
+        .player-container { background: transparent; padding: 25px 0; border-top: 1px dashed rgba(255,255,255,0.3); border-bottom: 1px dashed rgba(255,255,255,0.3); text-align: center; margin-top: 50px; }
+        .stream-links { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; font-family: var(--font-punk); font-size: 1.3rem; margin-top: 15px; text-shadow: 3px 3px 0px #000; }
+        .stream-links a { color: var(--orange-neon); text-decoration: none; text-transform: uppercase; padding: 8px 15px; border: 2px solid transparent; transition: 0.2s; display: inline-block; }
         .stream-links a:hover { color: #000; background: #fff; border: 2px solid #fff; transform: scale(1.05); }
         
-        @media (max-width: 600px) {
-            h1.page-title { font-size: 2.3rem; } h2.song-title { font-size: 1.5rem; }
-        }
+        @media (max-width: 600px) { h1.page-title { font-size: 2.3rem; } h2.song-title { font-size: 1.5rem; } }
     </style>
 </head>
 <body>
@@ -146,10 +115,7 @@ Break all the fucking prejudices
 Hey, we,   WE DON’T WANT   Corrupt
 
 Hey, we,   WE DON’T WANT   Corruptors</div>
-            <!-- IL PENSIERO DELLA BAND (TESTO INGLESE E ITALIANO DEFINITIVO) -->
             <div class="band-thought">
-                
-                <!-- BLOCCO INGLESE -->
                 <div class="thought-block">
                     <h3 class="section-label" style="margin-top:0; color:var(--yellow-neon);">🇬🇧 BAND THOUGHT / LINER NOTES</h3>
                     <p>When you listen to "WE ARE ALL INSANITY", we are inviting you to pause for a moment and look beneath the surface of a society that seems to have lost its way. This song was not written to feed more anger, because we know all too well that violence only breeds more violence, playing right into the hands of those who want to see us divided. On the contrary, ours is a firm call to awareness: we want to expose, with absolute clarity, where the evil we are experiencing truly begins.</p>
@@ -159,23 +125,21 @@ Hey, we,   WE DON’T WANT   Corruptors</div>
                     <p style="margin-top: 15px; color: var(--orange-neon);">I.V.D.</p>
                 </div>
                 
-                <!-- BLOCCO ITALIANO -->
                 <div class="thought-block" style="border-top: 1px dashed rgba(255,255,255,0.2); padding-top: 30px; margin-top: 30px;">
                     <h3 class="section-label" style="margin-top:0; color:var(--yellow-neon);">🇮🇹 IL PENSIERO DELLA BAND</h3>
-                    <p>Quando ascoltate "WE ARE ALL INSANITY", vi stiamo invitando a fermarvi un attimo per guardare oltre la superficie di una società che sembra aver perso la bussola. Questa canzone non nasce per alimentare altra rabbia, perché sappiamo bene che la violenza genera solo altra violenza, facendo il gioco di chi vuole vederci divisi. Al contrario, il nostro è un invito fermo alla consapevolezza: vogliamo mettere in luce, con assoluta lucidità, da dove parte davvero il male che stiamo vivendo.</p>
+                    <p>Quando ascoltate "WE ARE ALL INSANITY", vi stiamo invitando a fermarvi un attimo per guardare oltre la superficie di una società che sembra aver perso la bussola. Questa canzone non nasce per alimentar altra rabbia, perché sappiamo bene che la violenza genera solo altra violenza, facendo il gioco di chi vuole vederci divisi. Al contrario, il nostro è un invito fermo alla consapevolezza: vogliamo mettere in luce, con assoluta lucidità, da dove parte davvero il male che stiamo vivendo.</p>
                     <p style="margin-top: 15px;">La realtà è che il mondo oggi è bloccato in un circolo vizioso guidato unicamente da chi corrompe e da chi si fa corrompere. È questo sistema parassitario, basato sull'avidità di pochi, a calpestare il bene comune e a rubare il futuro alle nuove generazioni. Per evitare che il popolo si accorga di questa dinamica e si ribelli, veniamo costantemente sommersi da migliaia di messaggi mediatici, narrazioni aggressive e un odio sottile e velato. Non si tratta di vera informazione, ma di una strategia mirata a distrarci, a farci focalizzare sui conflitti sbagliati e ad alimentare pregiudizi reciproci.</p>
                     <p style="margin-top: 15px;">Subendo passivamente questo bombardamento quotidiano, finiamo per cadere in un abisso di apatia e isolamento, perdendo il contatto con la realtà fino ad accettare come "normale" un mondo che in verità è profondamente malato ed alienante. È proprio questa la pazzia collettiva di cui parliamo nel brano.</p>
                     <p style="margin-top: 15px;">Quando urliamo il nostro "Enough!", stiamo lanciando un richiamo pacifico ma irremovibile all'unione: l'unica vera rivoluzione possibile è superare ogni barriera psicologica e ogni cieco pregiudizio per ritrovare l'empatia tra gli esseri viventi. Solo restando uniti e rifiutando in blocco la logica dei corrotti possiamo spegnere la nebbia mediatica, riprenderci la nostra lucidità e fermare questo declino.</p>
                     <p style="margin-top: 15px; color: var(--orange-neon);">I.V.D.</p>
                 </div>
-
             </div>
 
-            <!-- SEZIONE ASCOLTO E RIENTRO -->
+            <!-- COLLEGAMENTO DISTROKID DEFINITIVO RISOLTO -->
             <div class="player-container">
                 <p style="font-family: var(--font-punk); color: #fff; font-size: 1.1rem; margin: 0; letter-spacing: 1px; text-shadow: 2px 2px 0px #000;">STREAM THIS TRACK ON PLATFORMS</p>
                 <div class="stream-links">
-                    <a href="https://distrokid.com" target="_blank">DISTROKID / LISTEN NOW</a>
+                    <a href="https://distrokid.com/hyperfollow/insanevoodoodoll/we-are-all-insanity-intro--break-all-barriers-2" target="_blank">DISTROKID / LISTEN NOW</a>
                     <a href="we-are-all-insanity-album.html" style="color:var(--text-color);">GO BACK TO TRACKLIST</a>
                 </div>
             </div>
