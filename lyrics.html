@@ -22,7 +22,12 @@
         }
         body {
             background-color: var(--bg-color);
-            background-image: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.85)), url('https://transparenttextures.com');
+            /* AGGANCIATA LA GRAFICA DEL SINGOLO COME SFONDO NUDO */
+            background-image: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.90)), url('grafica-singolo-insanity.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             color: var(--text-color);
             font-family: var(--font-text);
             line-height: 1.8;
@@ -31,41 +36,10 @@
             position: relative;
             overflow-x: hidden;
         }
-        .background-logo {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 95vw;
-            height: 95vh;
-            background-image: url('IMG_0230.jpeg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            opacity: 0.40;
-            z-index: -2;
-            pointer-events: none;
-        }
-        .collage-photo {
-            position: absolute;
-            z-index: -1;
-            pointer-events: none;
-            background-color: #080808;
-            padding: 10px;
-            border: 1px solid #1a1a1a;
-            box-shadow: 10px 15px 35px rgba(0,0,0,0.9); 
-            filter: grayscale(100%) contrast(180%) brightness(0.55);
-            opacity: 0.85; 
-            max-width: 1100px;
-            width: 90vw;
-            height: auto;
-        }
-        .photo-1 { top: 20%; left: -5%; transform: rotate(-3deg); clip-path: polygon(2% 0%, 98% 3%, 100% 95%, 95% 100%, 0% 98%, 3% 50%); }
-        .photo-2 { top: 60%; right: -5%; transform: rotate(4deg); clip-path: polygon(0% 4%, 95% 0%, 98% 92%, 91% 100%, 4% 96%, 1% 40%); }
-
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; position: relative; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; position: relative; text-align: center; }
+        
         h1.page-title {
-            font-family: var(--font-punk); font-size: 3.5rem; color: #fff; text-transform: uppercase; text-align: center; margin: 20px 0 40px 0; letter-spacing: 4px;
+            font-family: var(--font-punk); font-size: 3.5rem; color: #fff; text-transform: uppercase; margin: 20px 0 40px 0; letter-spacing: 4px;
             text-shadow: 5px 5px 0px #000, -2px -2px 0px #000;
         }
         h2.song-title {
@@ -75,19 +49,40 @@
         h3.section-label {
             font-family: var(--font-punk); font-size: 1.3rem; color: var(--yellow-neon); margin: 25px 0 15px 0; text-transform: uppercase; text-shadow: 2px 2px 0px #000;
         }
+        
+        /* SCATOLA DEL TESTO TRASPARENTE SENZA RETTANGOLO NERO */
         .lyrics-box {
-            background-color: rgba(15, 15, 15, 0.85); padding: 30px; border-left: 4px solid var(--orange-neon); box-shadow: 5px 5px 15px rgba(0,0,0,0.5); margin-bottom: 40px;
+            background-color: transparent; 
+            padding: 10px 0; 
+            border: none;
+            box-shadow: none; 
+            margin-bottom: 40px;
         }
         .lyrics-text {
-            font-size: 1.1rem; color: #fff; font-weight: bold; text-shadow: 2px 2px 0px #000; white-space: pre-line; margin-bottom: 30px;
+            font-size: 1.1rem; color: #fff; font-weight: bold; text-shadow: 3px 3px 0px #000, -1px -1px 0px #000; white-space: pre-line; margin-bottom: 30px;
         }
+        
+        /* I BLOCCHI DEI PENSIERI GALLEGGIANO NUDI SULLO SFONDO */
         .band-thought {
-            background: rgba(0, 0, 0, 0.9); padding: 25px; border: 1px dashed rgba(255, 255, 255, 0.2); margin-top: 40px; font-size: 1.05rem; color: #fff;
+            background: transparent; 
+            padding: 0; 
+            border: none; 
+            margin-top: 40px; 
+            font-size: 1.05rem; 
+            color: #fff;
+            text-align: left;
         }
-        .thought-block { margin-bottom: 30px; }
-        .thought-block:last-child { margin-bottom: 0; }
+        .thought-block { margin-bottom: 40px; }
+        .thought-block p {
+            text-shadow: 2px 2px 0px #000, -1px -1px 0px #000;
+            font-weight: bold;
+        }
+        
         .player-container { 
-            background: transparent; padding: 25px; border: 1px dashed var(--blue-neon); text-align: center; margin-top: 30px; 
+            background: transparent; padding: 25px 0; 
+            border-top: 1px dashed rgba(255,255,255,0.3);
+            border-bottom: 1px dashed rgba(255,255,255,0.3);
+            text-align: center; margin-top: 50px; 
         }
         .stream-links {
             display: flex; justify-content: center; gap: 15px; font-family: var(--font-punk); font-size: 1.3rem; margin-top: 15px; text-shadow: 3px 3px 0px #000;
@@ -96,15 +91,11 @@
         .stream-links a:hover { color: #000; background: #fff; border: 2px solid #fff; transform: scale(1.05); }
         
         @media (max-width: 600px) {
-            h1.page-title { font-size: 2.3rem; } h2.song-title { font-size: 1.5rem; } .lyrics-box { padding: 15px; }
+            h1.page-title { font-size: 2.3rem; } h2.song-title { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
-    <div class="background-logo"></div>
-    <div class="collage-photo photo-1"><img src="IMG_0211.jpeg" alt="Insane Voodoo Doll Sfondo 1"></div>
-    <div class="collage-photo photo-2"><img src="IMG_0223.jpeg" alt="Insane Voodoo Doll Sfondo 2"></div>
-
     <div class="container">
         <h1 class="page-title">Official Lyrics</h1>
         
@@ -155,29 +146,40 @@ Break all the fucking prejudices
 Hey, we,   WE DON’T WANT   Corrupt
 
 Hey, we,   WE DON’T WANT   Corruptors</div>
-            <!-- IL PENSIERO DELLA BAND (SDOPPIATO IN INGLESE E ITALIANO) -->
+            <!-- IL PENSIERO DELLA BAND (TESTO INGLESE E ITALIANO DEFINITIVO) -->
             <div class="band-thought">
+                
+                <!-- BLOCCO INGLESE -->
                 <div class="thought-block">
                     <h3 class="section-label" style="margin-top:0; color:var(--yellow-neon);">🇬🇧 BAND THOUGHT / LINER NOTES</h3>
-                    <p style="text-shadow: 3px 3px 0px #000; font-weight: bold; color: #fff;">[Write here the English meaning and social context of the song. You can edit this text directly on GitHub anytime]</p>
+                    <p>When you listen to "WE ARE ALL INSANITY", we are inviting you to pause for a moment and look beneath the surface of a society that seems to have lost its way. This song was not written to feed more anger, because we know all too well that violence only breeds more violence, playing right into the hands of those who want to see us divided. On the contrary, ours is a firm call to awareness: we want to expose, with absolute clarity, where the evil we are experiencing truly begins.</p>
+                    <p style="margin-top: 15px;">The reality is that today's world is trapped in a vicious cycle driven solely by those who corrupt and those who allow themselves to be corrupted. It is this parasitic system, built on the greed of a few, that tramples upon the common good and robs new generations of their future. To prevent people from noticing this dynamic and rebelling, we are constantly submerged by thousands of media messages, aggressive narratives, and a subtle, veiled hatred. This is not real information; it is a calculated strategy designed to distract us, to force our focus onto the wrong conflicts, and to fuel mutual prejudices.</p>
+                    <p style="margin-top: 15px;">By passively enduring this daily bombardment, we end up falling into an abyss of apathy and isolation, losing touch with reality until we accept as "normal" a world that is actually deeply sick and alienating. This is precisely the collective madness we talk about in the track.</p>
+                    <p style="margin-top: 15px;">When we scream our "Enough!", we are launching a peaceful yet unyielding call for unity: the only true revolution possible is to break through every psychological barrier and every blind prejudice to rediscover empathy among living beings. Only by standing together and completely rejecting the logic of the corrupt can we clear the media fog, reclaim our clarity, and stop this decline.</p>
+                    <p style="margin-top: 15px; color: var(--orange-neon);">I.V.D.</p>
                 </div>
                 
-                <div class="thought-block" style="border-top: 1px dashed rgba(255,255,255,0.2); padding-top: 20px;">
+                <!-- BLOCCO ITALIANO -->
+                <div class="thought-block" style="border-top: 1px dashed rgba(255,255,255,0.2); padding-top: 30px; margin-top: 30px;">
                     <h3 class="section-label" style="margin-top:0; color:var(--yellow-neon);">🇮🇹 IL PENSIERO DELLA BAND</h3>
-                    <p style="text-shadow: 3px 3px 0px #000; font-weight: bold; color: #fff;">[Scrivi qui il significato in italiano e il contesto sociale del brano. Puoi modificare questo testo su GitHub quando vuoi]</p>
+                    <p>Quando ascoltate "WE ARE ALL INSANITY", vi stiamo invitando a fermarvi un attimo per guardare oltre la superficie di una società che sembra aver perso la bussola. Questa canzone non nasce per alimentare altra rabbia, perché sappiamo bene che la violenza genera solo altra violenza, facendo il gioco di chi vuole vederci divisi. Al contrario, il nostro è un invito fermo alla consapevolezza: vogliamo mettere in luce, con assoluta lucidità, da dove parte davvero il male che stiamo vivendo.</p>
+                    <p style="margin-top: 15px;">La realtà è che il mondo oggi è bloccato in un circolo vizioso guidato unicamente da chi corrompe e da chi si fa corrompere. È questo sistema parassitario, basato sull'avidità di pochi, a calpestare il bene comune e a rubare il futuro alle nuove generazioni. Per evitare che il popolo si accorga di questa dinamica e si ribelli, veniamo costantemente sommersi da migliaia di messaggi mediatici, narrazioni aggressive e un odio sottile e velato. Non si tratta di vera informazione, ma di una strategia mirata a distrarci, a farci focalizzare sui conflitti sbagliati e ad alimentare pregiudizi reciproci.</p>
+                    <p style="margin-top: 15px;">Subendo passivamente questo bombardamento quotidiano, finiamo per cadere in un abisso di apatia e isolamento, perdendo il contatto con la realtà fino ad accettare come "normale" un mondo che in verità è profondamente malato ed alienante. È proprio questa la pazzia collettiva di cui parliamo nel brano.</p>
+                    <p style="margin-top: 15px;">Quando urliamo il nostro "Enough!", stiamo lanciando un richiamo pacifico ma irremovibile all'unione: l'unica vera rivoluzione possibile è superare ogni barriera psicologica e ogni cieco pregiudizio per ritrovare l'empatia tra gli esseri viventi. Solo restando uniti e rifiutando in blocco la logica dei corrotti possiamo spegnere la nebbia mediatica, riprenderci la nostra lucidità e fermare questo declino.</p>
+                    <p style="margin-top: 15px; color: var(--orange-neon);">I.V.D.</p>
                 </div>
+
             </div>
 
-            <!-- ASCOLTO DIRETTO E RITORNO -->
+            <!-- SEZIONE ASCOLTO E RIENTRO -->
             <div class="player-container">
                 <p style="font-family: var(--font-punk); color: #fff; font-size: 1.1rem; margin: 0; letter-spacing: 1px; text-shadow: 2px 2px 0px #000;">STREAM THIS TRACK ON PLATFORMS</p>
                 <div class="stream-links">
                     <a href="https://distrokid.com" target="_blank">DISTROKID / LISTEN NOW</a>
-                    <a href="index.html" style="color:var(--text-color);">GO BACK</a>
+                    <a href="we-are-all-insanity-album.html" style="color:var(--text-color);">GO BACK TO TRACKLIST</a>
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
-
