@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSANE VOODOO DOLL - ALBUMS</title>
+    <style>
+        @font-face {
+            font-family: 'PunkKid';
+            src: url('punk%20kid.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        :root {
+            --bg-color: #0c0c0c;
+            --text-color: #d8d8d8;
+            --orange-neon: #ff4500;
+            --yellow-neon: #ffcc00;
+            --font-punk: 'PunkKid', 'Arial Black', 'Impact', sans-serif;
+            --font-text: 'Courier New', Courier, monospace;
+        }
+        body {
+            background-color: var(--bg-color);
+            /* UTILIZZA LA FOTO DELLA BAND COME SFONDO FISSO NUDO */
+            background-image: linear-gradient(rgba(12, 12, 12, 0.80), rgba(12, 12, 12, 0.85)), url('sfondo-band.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--text-color);
+            font-family: var(--font-text);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; text-align: center; }
+        
+        h1 {
+            font-family: var(--font-punk); font-size: 3.5rem; color: #fff; text-transform: uppercase; margin-bottom: 50px; letter-spacing: 4px;
+            text-shadow: 5px 5px 0px #000, -2px -2px 0px #000;
+        }
+        
+        .album-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        /* I PULSANTI DEGLI ALBUM GALLEGGIANO SENZA SCATOLE NERE COPRENTI */
+        .album-button {
+            font-family: var(--font-punk);
+            font-size: 2rem;
+            color: var(--orange-neon);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 10px 20px;
+            border: 2px dashed transparent;
+            text-shadow: 3px 3px 0px #000;
+            transition: all 0.2s ease;
+        }
+        .album-button:hover {
+            color: #000;
+            background: #fff;
+            border: 2px dashed #fff;
+            transform: scale(1.05) rotate(-1deg);
+            box-shadow: -5px 5px 0px var(--orange-neon);
+        }
+        
+        .back-btn {
+            display: inline-block; margin-top: 60px; color: #fff; text-decoration: none; font-family: var(--font-punk); font-size: 1.2rem; text-transform: uppercase; border-bottom: 1px dashed #fff; padding-bottom: 2px; text-shadow: 2px 2px 0px #000;
+        }
+        .back-btn:hover { color: var(--yellow-neon); border-color: var(--yellow-neon); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Official Discography</h1>
+        
+        <div class="album-list">
+            <!-- PRIMO ALBUM: CLICCANDOCI SOPRA APRE LA LISTA CANZONI -->
+            <a href="we-are-all-insanity-album.html" class="album-button">We Are All Insanity (Album)</a>
+        </div>
+        
+        <a href="index.html" class="back-btn">Go Back to Home</a>
+    </div>
+</body>
+</html>
 
