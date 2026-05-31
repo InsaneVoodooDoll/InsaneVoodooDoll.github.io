@@ -1,1 +1,183 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSANE VOODOO DOLL - LYRICS</title>
+    <style>
+        @font-face {
+            font-family: 'PunkKid';
+            src: url('punk%20kid.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        :root {
+            --bg-color: #0c0c0c;
+            --text-color: #d8d8d8;
+            --orange-neon: #ff4500;
+            --blue-neon: #00a8ff;
+            --yellow-neon: #ffcc00;
+            --font-punk: 'PunkKid', 'Arial Black', 'Impact', sans-serif;
+            --font-text: 'Courier New', Courier, monospace;
+        }
+        body {
+            background-color: var(--bg-color);
+            background-image: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.85)), url('https://transparenttextures.com');
+            color: var(--text-color);
+            font-family: var(--font-text);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow-x: hidden;
+        }
+        .background-logo {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 95vw;
+            height: 95vh;
+            background-image: url('IMG_0230.jpeg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            opacity: 0.40;
+            z-index: -2;
+            pointer-events: none;
+        }
+        .collage-photo {
+            position: absolute;
+            z-index: -1;
+            pointer-events: none;
+            background-color: #080808;
+            padding: 10px;
+            border: 1px solid #1a1a1a;
+            box-shadow: 10px 15px 35px rgba(0,0,0,0.9); 
+            filter: grayscale(100%) contrast(180%) brightness(0.55);
+            opacity: 0.85; 
+            max-width: 1100px;
+            width: 90vw;
+            height: auto;
+        }
+        .photo-1 { top: 20%; left: -5%; transform: rotate(-3deg); clip-path: polygon(2% 0%, 98% 3%, 100% 95%, 95% 100%, 0% 98%, 3% 50%); }
+        .photo-2 { top: 60%; right: -5%; transform: rotate(4deg); clip-path: polygon(0% 4%, 95% 0%, 98% 92%, 91% 100%, 4% 96%, 1% 40%); }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; position: relative; }
+        h1.page-title {
+            font-family: var(--font-punk); font-size: 3.5rem; color: #fff; text-transform: uppercase; text-align: center; margin: 20px 0 40px 0; letter-spacing: 4px;
+            text-shadow: 5px 5px 0px #000, -2px -2px 0px #000;
+        }
+        h2.song-title {
+            font-family: var(--font-punk); font-size: 2.2rem; color: var(--orange-neon); text-transform: uppercase; margin-bottom: 25px; letter-spacing: 2px;
+            text-shadow: 3px 3px 0px #000; border-bottom: 2px dashed rgba(255,255,255,0.2); padding-bottom: 10px;
+        }
+        h3.section-label {
+            font-family: var(--font-punk); font-size: 1.3rem; color: var(--yellow-neon); margin: 25px 0 15px 0; text-transform: uppercase; text-shadow: 2px 2px 0px #000;
+        }
+        .lyrics-box {
+            background-color: rgba(15, 15, 15, 0.85); padding: 30px; border-left: 4px solid var(--orange-neon); box-shadow: 5px 5px 15px rgba(0,0,0,0.5); margin-bottom: 40px;
+        }
+        .lyrics-text {
+            font-size: 1.1rem; color: #fff; font-weight: bold; text-shadow: 2px 2px 0px #000; white-space: pre-line; margin-bottom: 30px;
+        }
+        .band-thought {
+            background: rgba(0, 0, 0, 0.9); padding: 25px; border: 1px dashed rgba(255, 255, 255, 0.2); margin-top: 40px; font-size: 1.05rem; color: #fff;
+        }
+        .thought-block { margin-bottom: 30px; }
+        .thought-block:last-child { margin-bottom: 0; }
+        .player-container { 
+            background: transparent; padding: 25px; border: 1px dashed var(--blue-neon); text-align: center; margin-top: 30px; 
+        }
+        .stream-links {
+            display: flex; justify-content: center; gap: 15px; font-family: var(--font-punk); font-size: 1.3rem; margin-top: 15px; text-shadow: 3px 3px 0px #000;
+        }
+        .stream-links a { color: var(--orange-neon); text-decoration: none; text-transform: uppercase; padding: 8px 15px; border: 2px solid transparent; transition: 0.2s; }
+        .stream-links a:hover { color: #000; background: #fff; border: 2px solid #fff; transform: scale(1.05); }
+        
+        @media (max-width: 600px) {
+            h1.page-title { font-size: 2.3rem; } h2.song-title { font-size: 1.5rem; } .lyrics-box { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-logo"></div>
+    <div class="collage-photo photo-1"><img src="IMG_0211.jpeg" alt="Insane Voodoo Doll Sfondo 1"></div>
+    <div class="collage-photo photo-2"><img src="IMG_0223.jpeg" alt="Insane Voodoo Doll Sfondo 2"></div>
+
+    <div class="container">
+        <h1 class="page-title">Official Lyrics</h1>
+        
+        <div class="lyrics-box">
+            <h2 class="song-title">We are all Insanity (intro) + Break all Barriers</h2>
+            
+            <h3 class="section-label">WE ARE ALL INSANITY (intro)</h3>
+            <div class="lyrics-text">We are all insanity 
+We are all insanity
+We are all insanity
+We are all insanity
+We are all insanity
+We are all insanity
+We are all insanity
+We are all insanity</div>
+
+            <h3 class="section-label">BREAK ALL BARRIERS</h3>
+            <div class="lyrics-text">Submerged by thousands messages 
+Aggressive advertising of violence 
+Veiled and hidden hatred towards all
+Enough with these aggressive lies of violence
+
+Enough Enough Enough
+Enough Enough Enough
+
+We are in a deep 
+We are in a deep 
+We are in a deep 
+
+Suicidal delirium
+Suicidal delirium
+Suicidal delirium  
+Suicidal delirium
+Suicidal delirium
+
+Deliriummm
+
+Break all the fucking barriers
+Break all the fucking prejudices
+
+Hey, we,   WE DON’T WANT   Corrupt
+
+Hey, we,   WE DON’T WANT   Corruptors
+
+Break all the fucking barriers
+Break all the fucking prejudices
+
+Hey, we,   WE DON’T WANT   Corrupt
+
+Hey, we,   WE DON’T WANT   Corruptors</div>
+            <!-- IL PENSIERO DELLA BAND (SDOPPIATO IN INGLESE E ITALIANO) -->
+            <div class="band-thought">
+                <div class="thought-block">
+                    <h3 class="section-label" style="margin-top:0; color:var(--yellow-neon);">🇬🇧 BAND THOUGHT / LINER NOTES</h3>
+                    <p style="text-shadow: 3px 3px 0px #000; font-weight: bold; color: #fff;">[Write here the English meaning and social context of the song. You can edit this text directly on GitHub anytime]</p>
+                </div>
+                
+                <div class="thought-block" style="border-top: 1px dashed rgba(255,255,255,0.2); padding-top: 20px;">
+                    <h3 class="section-label" style="margin-top:0; color:var(--yellow-neon);">🇮🇹 IL PENSIERO DELLA BAND</h3>
+                    <p style="text-shadow: 3px 3px 0px #000; font-weight: bold; color: #fff;">[Scrivi qui il significato in italiano e il contesto sociale del brano. Puoi modificare questo testo su GitHub quando vuoi]</p>
+                </div>
+            </div>
+
+            <!-- ASCOLTO DIRETTO E RITORNO -->
+            <div class="player-container">
+                <p style="font-family: var(--font-punk); color: #fff; font-size: 1.1rem; margin: 0; letter-spacing: 1px; text-shadow: 2px 2px 0px #000;">STREAM THIS TRACK ON PLATFORMS</p>
+                <div class="stream-links">
+                    <a href="https://distrokid.com" target="_blank">DISTROKID / LISTEN NOW</a>
+                    <a href="index.html" style="color:var(--text-color);">GO BACK</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
 
