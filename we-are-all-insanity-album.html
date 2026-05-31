@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSANE VOODOO DOLL - WE ARE ALL INSANITY</title>
+    <style>
+        @font-face {
+            font-family: 'PunkKid';
+            src: url('punk%20kid.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        :root {
+            --bg-color: #0c0c0c;
+            --text-color: #d8d8d8;
+            --orange-neon: #ff4500;
+            --blue-neon: #00a8ff;
+            --yellow-neon: #ffcc00;
+            --font-punk: 'PunkKid', 'Arial Black', 'Impact', sans-serif;
+            --font-text: 'Courier New', Courier, monospace;
+        }
+        body {
+            background-color: var(--bg-color);
+            /* UTILIZZA LA COPERTINA DELL'ALBUM COME SFONDO FISSO NUDO */
+            background-image: linear-gradient(rgba(12, 12, 12, 0.85), rgba(12, 12, 12, 0.90)), url('copertina-album-insanity.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: var(--text-color);
+            font-family: var(--font-text);
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; text-align: center; }
+        
+        h1 {
+            font-family: var(--font-punk); font-size: 3.5rem; color: #fff; text-transform: uppercase; margin-bottom: 10px; letter-spacing: 4px;
+            text-shadow: 5px 5px 0px #000, -2px -2px 0px #000;
+        }
+        .album-subtitle {
+            font-family: var(--font-punk); color: var(--yellow-neon); font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 50px; text-shadow: 2px 2px 0px #000;
+        }
+        
+        .tracklist {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        /* TRACCIA ATTIVA E CLICCABILE */
+        .track-link {
+            font-family: var(--font-text);
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--orange-neon);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 15px;
+            border: 1px dashed transparent;
+            text-shadow: 3px 3px 0px #000;
+            transition: all 0.2s ease;
+        }
+        .track-link:hover {
+            color: #000;
+            background: #fff;
+            border: 1px dashed #fff;
+            transform: scale(1.05) rotate(-1deg);
+            box-shadow: -4px 4px 0px var(--orange-neon);
+        }
+        
+        /* TRACCE NON ANCORA ATTIVE (GALEGGIANO NUDE) */
+        .track-disabled {
+            font-family: var(--font-text);
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 15px;
+            text-shadow: 3px 3px 0px #000;
+            user-select: none;
+        }
+        
+        .back-btn {
+            display: inline-block; margin-top: 50px; color: #fff; text-decoration: none; font-family: var(--font-punk); font-size: 1.2rem; text-transform: uppercase; border-bottom: 1px dashed #fff; padding-bottom: 2px; text-shadow: 2px 2px 0px #000;
+        }
+        .back-btn:hover { color: var(--yellow-neon); border-color: var(--yellow-neon); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>We Are All Insanity</h1>
+        <div class="album-subtitle">Tracklist</div>
+        
+        <div class="tracklist">
+            <!-- TRACCIA 01 ATTIVA: PORTA AI TESTI -->
+            <a href="lyrics.html" class="track-link">01. We are all Insanity (intro) + Break all Barriers</a>
+            
+            <!-- ALTRE TRACCE DISABILITATE MA VISIBILI -->
+            <div class="track-disabled">02. Please Stop</div>
+            <div class="track-disabled">03. Youth Crew</div>
+            <div class="track-disabled">04. Non tremare</div>
+            <div class="track-disabled">05. You are the only one</div>
+            <div class="track-disabled">06. What do our politicians want</div>
+            <div class="track-disabled">07. Insane Voodoo Doll</div>
+            <div class="track-disabled">08. Fight for Justice</div>
+            <div class="track-disabled">09. La ragione del male</div>
+            <div class="track-disabled">10. Fright</div>
+        </div>
+        
+        <a href="albums.html" class="back-btn">Go Back to Albums</a>
+    </div>
+</body>
+</html>
 
