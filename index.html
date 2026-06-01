@@ -51,15 +51,15 @@
             pointer-events: none;
         }
 
-        /* STRUTTURA COLLAGE FOTOGRAFICO - GIGANTE, SCURO E STRAPPATO */
+        /* STRUTTURA COLLAGE FOTOGRAFICO */
         .collage-photo {
             position: absolute;
             z-index: -1;
             pointer-events: none;
-            background-color: #080808;
-            padding: 10px;
-            border: 1px solid #1a1a1a;
-            box-shadow: 10px 15px 35px rgba(0,0,0,0.9); 
+            background-color: transparent;
+            padding: 0;
+            border: none;
+            box-shadow: 10px 15px 35px rgba(0,0,0,0.8); 
             filter: grayscale(100%) contrast(180%) brightness(0.55);
             opacity: 0.85; 
             max-width: 1100px;
@@ -72,7 +72,7 @@
             display: block;
         }
 
-        /* EFFETTO BORDI E ANGOLI SCIUPATI, ROTTI E STRAPPATI */
+        /* EFFETTO BORDI E ANGOLI SCIUPATI */
         .photo-1 { top: 10%; left: -5%; transform: rotate(-3deg); clip-path: polygon(2% 0%, 98% 3%, 100% 95%, 95% 100%, 0% 98%, 3% 50%); }
         .photo-2 { top: 40%; right: -5%; transform: rotate(4deg); clip-path: polygon(0% 4%, 95% 0%, 98% 92%, 91% 100%, 4% 96%, 1% 40%); }
         .photo-3 { top: 65%; left: -3%; transform: rotate(-2deg); clip-path: polygon(4% 1%, 100% 5%, 96% 98%, 88% 95%, 1% 100%, 0% 30%); }
@@ -95,10 +95,15 @@
         }
         
         .player-container { 
-            background: transparent; padding: 30px; 
-            border: 1px dashed var(--blue-neon);
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
-            text-align: center; margin-top: 40px; 
+            background: transparent; 
+            padding: 30px 0; 
+            border-top: 1px dashed rgba(255, 255, 255, 0.3);
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+            border-left: none;
+            border-right: none;
+            box-shadow: none;
+            text-align: center; 
+            margin-top: 40px; 
         }
         
         .stream-links, .contact-links {
@@ -143,11 +148,12 @@
                 <p>Il tempo passa purtroppo e per fortuna, la storia dovrebbe insegnarci, ma tutta questa spirale di corruttori e corrotti ci infestano sempre più.<br>Questo assalto sonoro non è un ritorno, né un'operazione nostalgica, è la conseguenza logica di una vita passata a guardare disgustosamente il mondo inabissarsi.<br>Dobbiamo essere realistici con una lucidità assoluta e a volte tagliente.<br>Queste tracce, registrate volutamente nell'ombra, portano ad una consapevolezza di chi non deve chiedere più il permesso a nessuno se questo è un mezzo per salvare il nostro futuro, perché tutti noi abbiamo l'obbligo di salvarlo.</p>
             </div>
             <div class="player-container">
-                <p style="font-family: var(--font-punk); color: var(--yellow-neon); font-size: 1.2rem; margin: 0 0 5px 0; letter-spacing: 2px; text-shadow: 2px 2px 0px #000;">STREAM SINGLE &amp; READ LYRICS</p>
+                <p style="font-family: var(--font-punk); color: #fff; font-size: 1.2rem; margin: 0; letter-spacing: 2px; text-shadow: 2px 2px 0px #000;">STREAM SINGLE &amp; READ LYRICS</p>
                 <div class="stream-links">
-                    <a href="https://distrokid.com/hyperfollow/insanevoodoodoll/we-are-all-insanity-intro--break-all-barriers-2" target="_blank">DISTROKID / LISTEN NOW</a>
+                    <a href="https://distrokid.com" target="_blank">DISTROKID / LISTEN NOW</a>
                     <span class="stream-divider">|</span>
-                    <a href="lyrics.html" style="color: var(--yellow-neon);">OFFICIAL LYRICS</a>
+                    <!-- LINK CORRETTO: ORA MANDA ALLA PAGINA DEGLI ALBUM -->
+                    <a href="albums.html" style="color: var(--yellow-neon);">OFFICIAL LYRICS</a>
                 </div>
             </div>
         </section>     
@@ -157,6 +163,7 @@
             <div class="lang-block">
                 <div class="lang-title">🇬🇧 Roots in the Concrete</div>
                 <p>After spending the '80s and '90s screaming our truths from makeshift yet deeply lived stages of a now forgotten era, driven by pure grit and a constructive spirit, today we have gathered around a table. We talked about the past and the present, and looking at each other, the result was anything but bright for our future.<br>The verdict is unbiased and no longer negotiable: it is completely unacceptable that the weakest, besides being the ones who suffer the most, are now mocked and derided.<br>We return with our music. In those years we were two separate bands; today we are a single raging river, delivering precise verdicts.<br>This will not be entertainment for the nostalgic: it will be a collective ritual, recorded and shared directly from the studio.<br>Our history remains engraved like scars upon our skin.<br>The names of the past no longer matter: what matters now is the necessity to denounce and resolve this global crisis.<br>Only the Union of everyone, even with a minimal, meaningful contribution, will lead to concrete results!</p>
+p>
             </div>
             <div class="lang-block">
                 <div class="lang-title">🇮🇹 RADICI NEL CEMENTO</div>
